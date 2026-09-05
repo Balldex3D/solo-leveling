@@ -80,7 +80,7 @@ export const RECETAS = {
       { paso: 6, titulo: 'Hacer la salsa', texto: 'Agrega directo a la sartén: 15 ml de salsa de soya, 10 ml de mirin, 5 g de jengibre rallado. Sube el fuego a MEDIO-ALTO (6-7) y revuelve sin parar durante 1 minuto: el líquido debe burbujear y reducirse (que hierva sin tapa hasta que el agua se evapora) hasta verse espeso y brillante, pegándose ligeramente al pollo — esa mezcla espesa es la salsa teriyaki, un glaseado.', timer_segundos: 60 },
       { paso: 7, titulo: 'Saltea la espinaca', texto: 'Pasa el pollo con su salsa a un plato. En la MISMA sartén (sin lavar, para aprovechar el sabor), agrega los 50 g de espinaca. Saltéala (muévela sin parar en la sartén) 1 minuto a fuego medio, hasta que se vea marchita (que pierde volumen, se ve más chica y blanda, de un verde oscuro brillante). No pases de 1 minuto o queda aguada.', timer_segundos: 60 },
       { paso: 8, titulo: 'Arma el bowl', texto: 'Primero el arroz (325 g) en la base, encima el pollo con su salsa, y a un lado la espinaca.' },
-      { paso: 9, titulo: 'Termina con toppings', texto: 'Termina con: 5 g de semillas de sésamo, 15 g de cebolla larga picada fina, y 5 ml de aceite de sésamo crudo rociado por encima (no se cocina, va al final).' },
+      { paso: 9, titulo: 'Termina con toppings', texto: 'Termina con: 5 g de semillas de sésamo, 15 g de cebolla larga cortada en aros finos (~2-3 mm de grosor), y 5 ml de aceite de sésamo crudo rociado por encima (no se cocina, va al final).' },
       { paso: 10, titulo: 'Sirve', texto: 'Sirve de inmediato mientras está caliente.' }
     ],
     pasos: [
@@ -92,7 +92,7 @@ export const RECETAS = {
       { texto: 'Agrega directo a la sartén (sin sacar el pollo): 15 ml de salsa de soya (aproximadamente 1 cucharada), 10 ml de mirin (aproximadamente 2 cucharaditas), y 5 g de jengibre rallado. SUBE EL FUEGO a MEDIO-ALTO (posición 6-7). Revuelve SIN PARAR durante 1 minuto. El líquido debe BURBUJEAR (hervir lentamente). Verás que la cantidad de líquido disminuye y se vuelve más espeso, pegándose al pollo. Cuando termine debe verse como un glaseado brillante cubriendo el pollo.', timer_segundos: 60 },
       { texto: 'Pasa TODO el pollo con su salsa a un plato limpio. En la MISMA sartén (sin lavarla, para aprovechar los sabores que quedan), agrega 50 g de espinaca. Si es CONGELADA, agrega directo congelada. Si es FRESCA de bolsa, lava bien, pica en trozos medianos y sécala. REVUELVE SIN PARAR durante 1 minuto a fuego MEDIO. La espinaca debe cambiar a un verde oscuro brillante y verse MARCHITA (pierde volumen, se ve más pequeña, blanda). No pases de 1 minuto o queda aguada y sin sabor.', timer_segundos: 60 },
       'Arma el bowl: En un bowl grande, coloca 325 g de arroz caliente en la BASE. Encima del arroz, coloca todo el pollo con su salsa teriyaki (en el centro). A un lado, coloca la espinaca marchita.',
-      'Termina con los toppings: Espolvorea 5 g de semillas de sésamo sobre el pollo. Pica 15 g de cebolla larga (solo la parte verde, finita) y espolvorea. Rocía 5 ml de aceite de sésamo CRUDO (NO se cocina, va al final para mantener su sabor) por encima de todo.',
+      'Termina con los toppings: Espolvorea 5 g de semillas de sésamo sobre el pollo. Pica 15 g de cebolla larga (solo la parte verde) en aros finos de aproximadamente 2-3 mm y espolvorea. Rocía 5 ml de aceite de sésamo CRUDO (NO se cocina, va al final para mantener su sabor) por encima de todo.',
       'Sirve de inmediato mientras está caliente. Si esperas mucho, el arroz se enfría.'
     ]
   },
@@ -175,7 +175,7 @@ export const RECETAS = {
       { paso: 6, titulo: 'Saca el pollo', texto: 'Saca 48 g de pechuga de pollo ya cocida y desmenuzada del batch. Si no está desmenuzada, deshébrala ahora con dos tenedores.' },
       { paso: 7, titulo: 'Saca el arroz', texto: 'Saca también 325 g de arroz ya cocido del batch, de la nevera o el congelador, y recaliéntalo hasta que esté humeante — nunca lo sirvas frío.' },
       { paso: 8, titulo: 'Arma el bowl', texto: '325 g de arroz cocido en la base; sobre una mitad pon el huevo soboro y sobre la otra mitad el pollo desmenuzado, para que se vean los dos colores separados.' },
-      { paso: 9, titulo: 'Termina', texto: 'Termina con: 5 ml de aceite de sésamo rociado, 15 g de cebolla larga picada y 5 g de sésamo por encima.' }
+      { paso: 9, titulo: 'Termina', texto: 'Termina con: 5 ml de aceite de sésamo rociado, 15 g de cebolla larga cortada en aros finos (~2-3 mm de grosor) y 5 g de sésamo por encima.' }
     ],
     pasos: [
       'En un bowl mediano, rompe 3 huevos. Agrega 10 ml de salsa de soya (aproximadamente 2 cucharaditas) y 10 ml de mirin (aproximadamente 2 cucharaditas). Con un tenedor, BATE bien hasta que el color sea AMARILLO PAREJO en toda la mezcla. NO deben verse vetas blancas de clara sin batir. Tarda ~1 minuto de batido constante.',
@@ -186,7 +186,7 @@ export const RECETAS = {
       'Saca 48 g de pechuga de pollo ya cocida del batch. Si viene en un bloque, pesa 48 g. Si está DESMENUZADA, úsala tal cual. Si está en trozos, deshébrala con dos tenedores tirando suavemente en direcciones opuestas hasta que quede toda deshilachada.',
       'Saca 325 g de arroz cocido del batch (nevera o congelador). En microondas: calienta 2 minutos revolviendo a mitad de camino. En sartén: calienta a fuego medio 2-3 minutos removiendo. El arroz debe estar HUMEANTE.',
       'Arma el bowl: En un bowl grande, coloca 325 g de arroz caliente en la BASE. Divide mentalmente el arroz en dos mitades. En UNA MITAD, coloca todo el huevo soboro (los granitos que acabas de cocinar). En la OTRA MITAD, coloca todo el pollo desmenuzado. Los dos colores deben verse separados (amarillo de huevo, blanco/café del pollo).',
-      'Termina: Rocía 5 ml de aceite de sésamo CRUDO (NO cocido) sobre el bowl completo. Pica 15 g de cebolla larga bien fina (solo la parte verde, si prefieres) y espolvorea. Espolvorea 5 g de semillas de sésamo. Sirve de inmediato mientras está caliente.'
+      'Termina: Rocía 5 ml de aceite de sésamo CRUDO (NO cocido) sobre el bowl completo. Pica 15 g de cebolla larga (solo la parte verde, si prefieres) en aros finos de aproximadamente 2-3 mm y espolvorea. Espolvorea 5 g de semillas de sésamo. Sirve de inmediato mientras está caliente.'
     ]
   },
 
@@ -220,7 +220,7 @@ export const RECETAS = {
       { paso: 6, titulo: 'Saltea espinaca', texto: 'Mientras tanto, en sartén SECA (sin aceite ni ghee) a fuego medio, saltea 50 g de espinaca 1 minuto moviendo sin parar, hasta que esté marchita.' },
       { paso: 7, titulo: 'Cocina arroz fresco', texto: 'Cocina 125 g de arroz crudo en la arrocera (agua según las marcas de tu arrocera, normalmente proporción 1:1.2 a 1:1.5 arroz:agua) — rinde ≈315 g cocido. La arrocera avisa sola cuando pasa a "mantener caliente". Este arroz se cocina fresco hoy mismo, no viene del congelador.' },
       { paso: 8, titulo: 'Arma el bowl', texto: 'Arroz → espinaca → el salmón encima (entero o en 2-3 trozos).' },
-      { paso: 9, titulo: 'Termina con toppings', texto: 'Termina con: 10 ml de salsa de soya rociada, 2 g de nori cortado en tiras finas con tijera, 5 g de sésamo, 10 g de cebolla larga picada y 10 ml de aceite de oliva crudo por encima.' },
+      { paso: 9, titulo: 'Termina con toppings', texto: 'Termina con: 10 ml de salsa de soya rociada, 2 g de nori cortado en tiras finas con tijera (~0.5 cm de ancho x 4-5 cm de largo), 5 g de sésamo, 10 g de cebolla larga cortada en aros finos (~2-3 mm de grosor) y 10 ml de aceite de oliva crudo por encima.' },
       { paso: 10, titulo: 'Importante', texto: 'Si al presionarlo no se separa fácil en láminas o el centro todavía se ve translúcido/vidrioso (no opaco), vuelve a cerrar la air fryer y cocina 2-3 minutos más — no te arriesgues a comer pescado crudo por dentro.' }
     ],
     pasos: [
@@ -232,7 +232,7 @@ export const RECETAS = {
       { texto: 'Mientras el salmón se cocina en la air fryer, prepara la espinaca (minuto 2-3): En una sartén pequeña, SIN ACEITE NI GHEE (completamente seca), a fuego MEDIO, coloca 50 g de espinaca. Si es CONGELADA, colócala directo. Si es FRESCA de bolsa, lava bien, pica en trozos medianos y sécala con papel. REVUELVE SIN PARAR durante 1 minuto exacto. La espinaca debe cambiar a VERDE OSCURO BRILLANTE y verse MARCHITA (pierde volumen, se ve más pequeña, blanda). NO pases de 1 minuto.', timer_segundos: 60 },
       'Cocina el ARROZ FRESCO (minuto 1 o después, mientras se cocinan las otras cosas): En una ARROCERA (no en sartén), coloca 125 g de arroz blanco crudo. Agrega AGUA según las marcas de tu arrocera — normalmente es una proporción 1:1.2 a 1:1.5 (arroz:agua). Por ejemplo, si la marca dice 1.2, es 125 g de arroz con 150 ml de agua. Si no tiene marcas, prueba 155 ml de agua. Enciende la arrocera. Ella misma cambiará a "Mantener caliente" cuando esté lista. El arroz rendirá aproximadamente 315 g cocido. ESTE ARROZ ES FRESCO, NO viene del congelador como los otros días.',
       'Cuando el salmón está listo (después de verificar que está opaco en el centro), arma el bowl: En un bowl grande, coloca 315 g de arroz CALIENTE en la BASE. Encima del arroz, coloca la espinaca marchita. Encima de la espinaca, coloca el salmón entero o en 2-3 trozos grandes (según tamaño del filete).',
-      'Termina con los toppings: Rocía 10 ml de salsa de soya (aproximadamente 2 cucharaditas) sobre el salmón. Corta 2 g de nori (alga) en tiras finas usando tijera. Espolvorea el nori. Espolvorea 5 g de semillas de sésamo. Pica 10 g de cebolla larga bien fina (solo la parte verde si prefieres) y espolvorea. Finalmente, rocía 10 ml de aceite de oliva CRUDO (NO se cocina, va al final para mantener su sabor) por encima de TODO.',
+      'Termina con los toppings: Rocía 10 ml de salsa de soya (aproximadamente 2 cucharaditas) sobre el salmón. Corta 2 g de nori (alga, viene en hoja seca) en tiras finas usando tijera: dobla la hoja por la mitad un par de veces y corta franjas de aproximadamente 0.5 cm de ancho por 4-5 cm de largo. Espolvorea el nori. Espolvorea 5 g de semillas de sésamo. Pica 10 g de cebolla larga (solo la parte verde si prefieres) en aros finos de aproximadamente 2-3 mm y espolvorea. Finalmente, rocía 10 ml de aceite de oliva CRUDO (NO se cocina, va al final para mantener su sabor) por encima de TODO.',
       'IMPORTANTE — Control de cocción del salmón: Si después de los 10 minutos el salmón no se separa fácil en láminas o el centro todavía se ve translúcido (brillante, no opaco), el pescado NO está cocido. Vuelve a meter en la air fryer otros 2-3 minutos. NO te apresures — un pescado crudo por dentro es peligroso. Es mejor cocinarlo un poco de más que de menos.'
     ]
   },
@@ -266,7 +266,7 @@ export const RECETAS = {
       'En un cucharón pequeño, disuelve 20 g de pasta miso: Vierte un poco del caldo caliente (no hirviendo) en el cucharón, agrega el miso y revuelve con una cuchara hasta que no queden grumos (tarda ~30 seg). Vierte todo de vuelta a la olla revolviendo lentamente.',
       'Prepara el huevo: OPCIÓN A (Pochéado — más fácil para principiantes): Calienta una sartén pequeña con agua, cuando hierva baja a fuego bajo y rompe 2 huevos en tazas pequeñas. Deslízalos suavemente en el agua caliente, cocina 3-4 minutos sin tapar hasta que la clara esté blanca opaca y la yema siga liquida. OPCIÓN B (Revuelto — si prefieres): Revuelve 2 huevos en un tazón, en sartén pequeña con fuego medio-bajo cocina revolviendo 2-3 minutos hasta que esté firme pero con un poco de humedad. Los dos están bien.',
       'Agrega 80 g de tofu Mori-Nu del recipiente (viene en su propio envase de vidrio). El tofu Silken es DELICADO: agrégalo con una cuchara sin grandes movimientos. Deja reposar 30 segundos sin mover la olla para que se temple.',
-      'Sirve en un bowl hondo: Vierte la sopa con fideos, espinaca y tofu. Coloca el huevo (pochéado o revuelto) encima. Termina con: 2 g de nori cortado en tiras finas con tijera, 15 g de cebolla larga picada fina, y 7 ml de aceite de sésamo CRUDO rociado por encima (el aceite NO se cocina, va al final para que mantenga su sabor).'
+      'Sirve en un bowl hondo: Vierte la sopa con fideos, espinaca y tofu. Coloca el huevo (pochéado o revuelto) encima. Termina con: 2 g de nori cortado en tiras finas con tijera (~0.5 cm de ancho x 4-5 cm de largo), 15 g de cebolla larga cortada en aros finos (~2-3 mm de grosor), y 7 ml de aceite de sésamo CRUDO rociado por encima (el aceite NO se cocina, va al final para que mantenga su sabor).'
     ]
   },
 
@@ -305,7 +305,7 @@ export const RECETAS = {
       { texto: 'Fríe el huevo en la MISMA sartén pequeña donde cociste la espinaca (limpia con papel si queda restos): A fuego MEDIO-BAJO, agrega 1 huevo (sin cáscara). Cocina SIN VOLTEAR durante 2-3 minutos. Sabrás que está listo cuando: la clara es BLANCA OPACA (no transparente) y la yema sigue BRILLANTE Y LÍQUIDA al inclinar el plato. Si todavía ves transparencia en la clara, cocina 30 segundos más.', timer_segundos: 180 },
       'Recalienta el arroz (250 g cocido) del refrigerador: En microondas 1-2 minutos (revolviendo a mitad de camino) o en sartén a fuego medio 2-3 minutos removiendo. Debe estar HUMEANTE (con vaho caliente saliendo).',
       'Arma el bowl: Primero coloca 250 g de arroz caliente en la BASE. Encima del arroz, coloca los cubos de tofu dorados en el CENTRO. A un lado, coloca la espinaca marchita. Encima de todo, coloca el huevo frito.',
-      'Termina: Rocía 15 ml de salsa de soya (aproximadamente 1 cucharada) sobre el tofu. Rocía 5 ml de aceite de sésamo CRUDO (NO cocido, va al final) por encima. Espolvorea 5 g de semillas de sésamo. Pica 10 g de cebolla larga fina y espolvorea encima. Sirve CALIENTE.'
+      'Termina: Rocía 15 ml de salsa de soya (aproximadamente 1 cucharada) sobre el tofu. Rocía 5 ml de aceite de sésamo CRUDO (NO cocido, va al final) por encima. Espolvorea 5 g de semillas de sésamo. Pica 10 g de cebolla larga en aros finos de aproximadamente 2-3 mm y espolvorea encima. Sirve CALIENTE.'
     ]
   },
 
@@ -340,7 +340,7 @@ export const RECETAS = {
       'Prepara el huevo mientras se templa la sopa: OPCIÓN A (Pochéado — recomendado): Calienta una sartén pequeña con agua, cuando hierva baja a fuego bajo. Rompe 1 huevo en una taza pequeña. Deslízalo suavemente en el agua. Cocina 3-4 minutos SIN TAPAR hasta que la clara esté blanca opaca y la yema siga líquida. OPCIÓN B (Revuelto): Si lo prefieres, revuelve 1 huevo en un tazón, cocina en sartén con fuego medio-bajo 2-3 minutos revolviendo hasta que esté firme. Ambas formas están bien.',
       { texto: 'Recalienta el arroz (250 g cocido): Si es MIÉRCOLES o SÁBADO: saca del refrigerador y calienta en microondas 1 minuto o en sartén a fuego medio 2-3 minutos removiendo. Si es DOMINGO: saca DIRECTO del congelador (sin descongelar) y calienta en microondas 2-3 minutos o en sartén 3-4 minutos removiendo. El arroz debe estar HUMEANTE.', timer_segundos: 180 },
       'Sirve: En un bowl hondo, vierte la sopa (con tofu y espinaca). En un bowl APARTE al lado, sirve el arroz caliente. NO MEZCLES el arroz con la sopa, se deshace. Coloca el huevo pochéado o revuelto ENCIMA de la sopa.',
-      'Termina: Corta 2 g de nori (alga) en tiras finas con tijera. Pica 15 g de cebolla larga bien fina. Rocía 7 ml de aceite de sésamo CRUDO por encima (el aceite NO se cocina, va al final para mantener su sabor). Sirve de inmediato mientras la sopa está caliente.'
+      'Termina: Corta 2 g de nori (alga) en tiras finas con tijera (~0.5 cm de ancho x 4-5 cm de largo). Pica 15 g de cebolla larga en aros finos de aproximadamente 2-3 mm. Rocía 7 ml de aceite de sésamo CRUDO por encima (el aceite NO se cocina, va al final para mantener su sabor). Sirve de inmediato mientras la sopa está caliente.'
     ]
   }
 };
