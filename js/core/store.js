@@ -15,6 +15,16 @@ export class Store {
     this.data = null;
     this.idbReady = false;
     this.useIDB = true;
+    this.changeListeners = [];
+  }
+
+  /**
+   * Suscribe una función que se ejecuta cada vez que se guarda el estado.
+   * Usado por cloudSync.js para subir el progreso a Supabase sin acoplar
+   * este módulo a esa dependencia.
+   */
+  onChange(fn) {
+    this.changeListeners.push(fn);
   }
 
   /**
@@ -166,6 +176,14 @@ export class Store {
     } else {
       this.saveToLocalStorage();
     }
+
+    this.changeListeners.forEach((fn) => {
+      try {
+        fn(this.data);
+      } catch (e) {
+        console.warn('Error en changeListener:', e);
+      }
+    });
   }
 
   /**

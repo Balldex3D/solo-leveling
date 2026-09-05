@@ -14,6 +14,7 @@ import { getFaseActiva } from './data/fases.js';
 import { macrosDeReceta, totalesDelDia, progresoVsMeta, autoVerificar } from './core/macros.js';
 import { renderEjercicio } from './screens/ejercicio.js';
 import { inicializarRecetaOverlay, abrirRecetaOverlay } from './screens/receta-overlay.js';
+import * as cloudSync from './core/cloudSync.js';
 
 // Verificación de datos
 console.log('🔍 Verificando aritmética de macros...');
@@ -60,6 +61,12 @@ async function init() {
   }
 
   await store.solicitarPersistencia();
+
+  try {
+    await cloudSync.iniciar(store);
+  } catch (e) {
+    console.warn('cloudSync no disponible (modo offline):', e);
+  }
 
   const esStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
   console.log('Standalone:', esStandalone);
@@ -745,7 +752,14 @@ function renderizarAjustes() {
         Versión 1.0 | Último backup: ${ajustes.ultimo_backup ? new Date(ajustes.ultimo_backup).toLocaleString() : 'nunca'}
       </div>
     </div>
+
+    <div class="panel" style="margin-top:var(--space-lg);">
+      <h3 style="margin:0 0 var(--space-md) 0;font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--clr-cian);">☁ Respaldo en la nube</h3>
+      <div id="cloud-sync-content">Cargando...</div>
+    </div>
   `;
+
+  renderizarRespaldoNube();
 
   container.querySelectorAll('[data-ajuste]').forEach(el => {
     el.addEventListener('change', () => {
@@ -790,6 +804,48 @@ function renderizarAjustes() {
       reader.readAsText(file);
     }
   });
+}
+
+async function renderizarRespaldoNube() {
+  const el = document.getElementById('cloud-sync-content');
+  if (!el) return;
+
+  const usuario = await cloudSync.obtenerUsuario();
+
+  if (usuario) {
+    el.innerHTML = `
+      <div style="font-size:13px;color:var(--clr-text-secondary);">Conectado como:</div>
+      <div style="font-size:14px;color:#fff;margin:4px 0 var(--space-md);word-break:break-all;">${usuario.email}</div>
+      <div style="font-size:12px;color:var(--clr-text-secondary);margin-bottom:var(--space-md);">Tu progreso se respalda automáticamente. Inicia sesión con este mismo correo en cualquier otro celular para recuperarlo.</div>
+      <button id="btn-cloud-logout" style="width:100%;">Cerrar sesión</button>
+    `;
+    document.getElementById('btn-cloud-logout').addEventListener('click', async () => {
+      await cloudSync.cerrarSesion();
+      renderizarRespaldoNube();
+    });
+  } else {
+    el.innerHTML = `
+      <div style="font-size:13px;color:var(--clr-text-secondary);margin-bottom:var(--space-md);">
+        Ahora mismo tu progreso solo vive en este celular. Ingresa tu correo para respaldarlo en la nube y poder recuperarlo si cambias de dispositivo.
+      </div>
+      <input type="email" id="cloud-email" placeholder="tu@correo.com" style="width:100%;padding:8px;background:var(--clr-darker);border:1px solid var(--clr-border);color:#fff;border-radius:2px;">
+      <button id="btn-cloud-login" style="width:100%;margin-top:var(--space-md);">Enviar link mágico</button>
+      <div id="cloud-status" style="margin-top:var(--space-sm);font-size:12px;color:var(--clr-text-secondary);"></div>
+    `;
+    document.getElementById('btn-cloud-login').addEventListener('click', async () => {
+      const email = document.getElementById('cloud-email').value.trim();
+      const status = document.getElementById('cloud-status');
+      if (!email || !email.includes('@')) {
+        status.textContent = 'Escribe un correo válido.';
+        return;
+      }
+      status.textContent = 'Enviando...';
+      const { ok, error } = await cloudSync.enviarLinkMagico(email);
+      status.textContent = ok
+        ? '✓ Revisa tu correo y toca el link para conectar este dispositivo.'
+        : '✗ Error: ' + (error?.message || 'intenta de nuevo');
+    });
+  }
 }
 
 // ============ RUTINA DIARIA ============
