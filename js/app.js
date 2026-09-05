@@ -528,8 +528,7 @@ function renderizarMercado() {
       <div class="mercado-item">
         <input type="checkbox" ${marcado ? 'checked' : ''} data-item="semanal_${item.id}" class="mercado-item__check">
         <div class="mercado-item__info">
-          <strong>${item.producto}</strong> — ${item.cantidad}<br>
-          <span class="mercado-item__precio">~$${item.precio_ck?.toLocaleString()}</span>
+          <strong>${item.producto}</strong> — ${item.cantidad}
           ${item.nota ? `<div class="text-secondary" style="font-size:12px;margin-top:4px;">${item.nota}</div>` : ''}
         </div>
       </div>
@@ -543,21 +542,22 @@ function renderizarMercado() {
       <div class="mercado-item">
         <input type="checkbox" ${marcado ? 'checked' : ''} data-item="mensual_${item.id}" class="mercado-item__check">
         <div class="mercado-item__info">
-          <strong>${item.producto}</strong> — ${item.cantidad}<br>
-          <span class="mercado-item__precio">~$${item.precio_ck?.toLocaleString()}</span>
+          <strong>${item.producto}</strong> — ${item.cantidad}
           ${item.nota ? `<div class="text-secondary" style="font-size:12px;margin-top:4px;">${item.nota}</div>` : ''}
         </div>
       </div>
     `;
   });
 
+  const notas = MERCADO.notas_importantes;
   html += `
     <div class="panel" style="margin-top:var(--space-lg);border-left:4px solid var(--clr-cian);">
-      <strong>Presupuesto mensual:</strong><br>
-      Escenario A (Éxito): ~$${MERCADO.presupuesto_info.total_escenario_a.toLocaleString()}<br>
-      Escenario B (D1/Ara): ~$${MERCADO.presupuesto_info.total_escenario_b.toLocaleString()}<br>
-      Tope máximo: $${MERCADO.presupuesto_info.tope_maximo.toLocaleString()}<br>
-      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${MERCADO.presupuesto_info.recomendacion}</p>
+      <strong>Notas importantes:</strong>
+      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.presupuesto}</p>
+      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.consistencia}</p>
+      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.salmon_fresco}</p>
+      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.tofu_critico}</p>
+      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.sobrantes}</p>
     </div>
   `;
 
