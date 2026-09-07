@@ -97,11 +97,12 @@ export function abrirRecetaOverlay(recetaId, onModoGuiado = null) {
   receta.ingredientes.forEach((ing, idx) => {
     const item = document.createElement('div');
     item.className = 'ej-check-item';
+    const peso = ing.cocido ? `${ing.crudo} crudo → ${ing.cocido} cocido` : ing.crudo;
     item.innerHTML = `
       <div class="ej-check-box"></div>
       <div class="ej-check-label" style="flex:1;">
         <strong>${ing.nombre}</strong>
-        <div style="font-size:12px;color:var(--clr-text-secondary);margin-top:2px;">${ing.crudo}</div>
+        <div style="font-size:12px;color:var(--clr-text-secondary);margin-top:2px;">${peso}</div>
       </div>
     `;
     item.addEventListener('click', () => item.classList.toggle('checked'));

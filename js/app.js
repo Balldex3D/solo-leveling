@@ -388,10 +388,11 @@ function mostrarReceta(recetaId) {
   `;
 
   recetaActual.ingredientes.forEach(ing => {
+    const peso = ing.cocido ? `${ing.crudo} crudo → ${ing.cocido} cocido` : ing.crudo;
     html += `
       <tr>
         <td>${ing.nombre}</td>
-        <td>${ing.crudo}</td>
+        <td>${peso}</td>
         <td style="text-align:right;">${ing.kcal}</td>
       </tr>
     `;
