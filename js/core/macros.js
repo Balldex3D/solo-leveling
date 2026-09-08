@@ -16,11 +16,15 @@ export function macrosDeReceta(recetaId, ajusteFase1 = false) {
   let grasa = receta.grasa_g;
   let carbo = receta.carbo_g;
 
-  if (ajusteFase1 && receta.ajuste_fase1) {
-    kcal += receta.ajuste_fase1.delta_kcal;
-    proteina += receta.ajuste_fase1.delta_p;
-    grasa += receta.ajuste_fase1.delta_g;
-    carbo += receta.ajuste_fase1.delta_c;
+  // receta.kcal/proteina_g/grasa_g/carbo_g YA incluyen el ajuste de Fase 1
+  // cuando existe (ver receta.ajuste_fase1.descripcion: "ya incluido en kcal").
+  // Si el ajuste está DESACTIVADO en Ajustes, hay que restar el delta para
+  // dar los valores base (sin Fase 1) — nunca sumarlo, o se cuenta doble.
+  if (!ajusteFase1 && receta.ajuste_fase1) {
+    kcal -= receta.ajuste_fase1.delta_kcal;
+    proteina -= receta.ajuste_fase1.delta_p;
+    grasa -= receta.ajuste_fase1.delta_g;
+    carbo -= receta.ajuste_fase1.delta_c;
   }
 
   return { kcal, proteina, grasa, carbo };
@@ -109,12 +113,12 @@ export function progresoVsMeta(totales, ajusteFase1 = false) {
 /** Auto-chequeo: verificar que los totales coinciden con el documento auditado. */
 export function autoVerificar() {
   const esperados = {
-    lunes: { kcal: 1925, proteina: 112, grasa: 54.5, carbo: 244.5 },
-    martes: { kcal: 1994, proteina: 108.5, grasa: 63.5, carbo: 245.5 },
-    miercoles: { kcal: 1925, proteina: 105.5, grasa: 57.5, carbo: 247.5 },
-    jueves: { kcal: 1925, proteina: 112, grasa: 54.5, carbo: 244.5 },
-    viernes: { kcal: 1994, proteina: 108.5, grasa: 63.5, carbo: 245.5 },
-    sabado: { kcal: 1886, proteina: 101.5, grasa: 57.5, carbo: 239 }
+    lunes: { kcal: 1976, proteina: 115.1, grasa: 53.1, carbo: 256.9 },
+    martes: { kcal: 2031, proteina: 111.2, grasa: 64.7, carbo: 250.5 },
+    miercoles: { kcal: 1970, proteina: 108.9, grasa: 55, carbo: 259.8 },
+    jueves: { kcal: 1976, proteina: 115.1, grasa: 53.1, carbo: 256.9 },
+    viernes: { kcal: 2031, proteina: 111.2, grasa: 64.7, carbo: 250.5 },
+    sabado: { kcal: 1976, proteina: 104.9, grasa: 59.9, carbo: 251.3 }
   };
 
   const dias = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
@@ -129,7 +133,7 @@ export function autoVerificar() {
     const diff = indexDia - hoy;
     fecha.setDate(fecha.getDate() + diff);
 
-    const totales = totalesDelDia(fecha, false);
+    const totales = totalesDelDia(fecha, true);
     const esperado = esperados[dia];
 
     if (!totales || !totales.verificable) {

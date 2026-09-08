@@ -13,7 +13,7 @@ export const MERCADO = {
   ],
 
   mensual_no_perecederos: [
-    { id: 'arroz', producto: 'Arroz blanco', cantidad: '5 kg', nota: 'Semanal: 1.100g (domingo batch) + 840g (miércoles batch) + 125g (sábado fresco)' },
+    { id: 'arroz', producto: 'Arroz blanco', cantidad: '5 kg', nota: 'Semanal: 550g (domingo batch) + 420g (miércoles batch) + 125g (sábado fresco) = ~1.1kg/semana' },
     { id: 'udon', producto: 'Fideos udon secos', cantidad: '4 paq. (200 g c/u)', nota: 'Para Miso Udon (Lunes + Jueves cenas)' },
     { id: 'crema_arroz', producto: 'Crema de arroz', cantidad: '1 kg', nota: 'Para batido post-entreno' },
     { id: 'miso', producto: 'Pasta miso', cantidad: '500 g', nota: 'Para Miso Udon y Tofu Tamago (40g/semana)' },
@@ -25,7 +25,8 @@ export const MERCADO = {
     { id: 'ghee', producto: 'Ghee clarificado', cantidad: '250 g', nota: 'Para cocción (batch + recetas)' },
     { id: 'aceite_oliva', producto: 'Aceite de oliva', cantidad: '500 ml', nota: 'Para Salmon Don topping (10ml/semana)' },
     { id: 'mani', producto: 'Mantequilla de maní', cantidad: '500 g', nota: 'Para batido post-entreno' },
-    { id: 'salsa_soya', producto: 'Salsa de soya', cantidad: '500 ml', nota: 'Para marinadas y recetas' }
+    { id: 'salsa_soya', producto: 'Salsa de soya', cantidad: '500 ml', nota: 'Para marinadas y recetas' },
+    { id: 'maicena', producto: 'Almidón de maíz (maicena)', cantidad: '250 g', nota: 'Para empanizar el tofu en Tofu Don (8g x2 = 16g/semana, Martes y Viernes cena)' }
   ],
 
   notas_importantes: {
