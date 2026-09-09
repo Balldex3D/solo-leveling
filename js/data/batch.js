@@ -1,160 +1,129 @@
 export const BATCH_COOKING = {
   domingo_noche: {
-    titulo: 'Batch Cooking — Domingo noche (cubre Lunes, Martes, Miércoles)',
+    titulo: 'Batch Cooking — Domingo noche',
     dia: 'domingo_noche',
     tiempo_min: 50,
-    orden_sugerido: `⏱️ ORDEN EXACTO PARA 50 MINUTOS:
-MIN 0:   ENCIENDE ARROCERA con 550g arroz + 660ml agua (durará ~20 min)
-MIN 2:   MIENTRAS HIERVE EL ARROZ: Corta pollo (195g), res (110g), cebolla (150g), ralla jengibre (30g)
-MIN 5:   ABRE TOFU: Pasa a contenedor de vidrio
-MIN 8:   POLLO ESTÁ CORTADO y LISTO para cocinar
-MIN 10:  INICIA COCCIÓN POLLO en sartén (8-10 min)
-MIN 20:  ARROZ ESTÁ LISTO. Retira de arrocera. Pasa a contenedor.
-MIN 21:  POLLO COCIDO. Divide en cubos + deshilachado. Marinada de res lista.
-MIN 30:  TODO ESTÁ EN CONTENEDORES, etiquetado y en nevera.
-FIN: 50 min. Lunes, Martes, Miércoles listos.`,
+    nota: 'Cubre Lunes · Martes · Miércoles — todos los tiempos',
     tareas: [
       {
-        texto: 'PASO 1: ENCIENDE LA ARROCERA (MIN 0)\n\nPrepara: 550g de arroz blanco CRUDO + 660ml de AGUA FRÍA.\n\nInstrucciones:\n1. Abre la arrocera\n2. Coloca 550g de arroz crudo en el recipiente interno\n3. Agrega 660ml de agua fría (no hirviente)\n4. Remueve bien\n5. Enciende la ARROCERA\n6. La arrocera dirá cuándo esté lista (~20 minutos). Ella sola cambiará a "Mantener caliente"\n\nMientras se cocina el arroz, continúa con los siguientes pasos.',
+        texto: 'PASO 1 — ENCIENDE LA ARROCERA (MIN 0)\n\n570 g de arroz blanco crudo + 684 ml de agua fría.\n\n1. Coloca 570 g de arroz en el recipiente de la arrocera\n2. Agrega 684 ml de agua fría\n3. Remueve y enciende\n4. Lista en ~20 min — cambiará sola a "Mantener caliente"\n\nMientras se cocina, continúa con los siguientes pasos.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 2: CORTA POLLO (MIN 2-8)\n\nPreparación: 195g de pechuga de pollo CRUDA\n\nTécnica:\n1. Saca la pechuga del refrigerador\n2. Coloca sobre tabla de corte LIMPIA\n3. Con cuchillo bien afilado, corta en TIRAS de 2-3cm de ancho (perpendicular a la fibra)\n4. NO hagas cubos todavía. Solo tiras grandes.\n5. Coloca todas las tiras en un plato\n\nRecuerda: Esto son 195g totales. Más adelante los dividirás en dos tipos:\n• 135g → cubos de 2cm (Lunes Teriyaki)\n• 60g → deshilachado (Miércoles Soboro)',
+        texto: 'PASO 2 — CORTA EL POLLO (MIN 2–8)\n\n195 g de pechuga de pollo CRUDA en total:\n  • 135 g → Lunes almuerzo (Chicken Teriyaki)\n  • 60 g → Miércoles almuerzo (Egg Soboro — deshilachado)\n\nTécnica:\n1. Pesa los dos bloques en la gramera (135 g y 60 g) y sepáralos visualmente\n2. Corta TODO en tiras de 2–3 cm de ancho, perpendicular a la fibra de la carne\n3. Coloca en un plato — aún no separes los dos grupos. Se dividen DESPUÉS de cocinar.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 3: CORTA RES EN TIRAS FINAS (MIN 2-8)\n\nPreparación: 110g de res magra CRUDA (lomo, entraña o bife angosto)\n\nTécnica IMPORTANTE:\n1. Saca la res del refrigerador\n2. Coloca sobre tabla de corte LIMPIA\n3. Identifica la FIBRA de la carne (líneas que van en una dirección)\n4. CORTA PERPENDICULAR a esa fibra (ángulo de 90 grados)\n5. Las tiras deben ser FINAS: aproximadamente 3-4mm de espesor\n6. Largo: 5-8cm\n7. Coloca todas las tiras en un plato SEPARADO\n\n⚠️ Importante: Cortar PERPENDICULAR a la fibra hace que la carne sea más tierna en la boca.',
+        texto: 'PASO 3 — CORTA LA RES EN TIRAS (MIN 2–8)\n\n110 g de res magra CRUDA (lomo o bola).\nNO se cocina ahora — va directo a la marinada para el Martes.\n\nTécnica:\n1. Identifica la fibra de la carne (líneas que van en una dirección)\n2. Corta PERPENDICULAR a esa fibra (90°): tiras de 3–4 mm de espesor y 5–8 cm de largo\n3. Coloca en un plato APARTE del pollo\n\n⚠️ Perpendicular a la fibra = carne más tierna al comer.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 4: ABRE TOFU (MIN 5)\n\nPreparación: 1 paquete de TOFU MORI-NU SILKEN (310g)\n\nInstrucciones:\n1. Saca el paquete del refrigerador\n2. Abre cuidadosamente (es frágil)\n3. Vierte TODO EL CONTENIDO en un CONTENEDOR HERMÉTICO DE VIDRIO (no plástico)\n4. Cierra bien\n5. Coloca etiqueta: "TOFU - Lunes/Martes/Miércoles CENA" + fecha de hoy\n6. Coloca en la NEVERA INMEDIATAMENTE\n\nNo hagas nada más con el tofu. Ya está guardado.',
+        texto: 'PASO 4 — RALLA JENGIBRE Y PICA CEBOLLA (MIN 2–8)\n\nJengibre: 10–15 g rallado (para la marinada de res + condimento Lunes/Miércoles).\nCebolla larga: 60 g picada en rodajas finas de 2–3 mm.\n\n1. Pela el jengibre con cuchillo y ralla hacia abajo con rallador fino\n2. Recoge en un platito pequeño\n3. Pica la cebolla larga (parte verde y blanca) en rodajas de 2–3 mm\n4. Guarda cada uno en un contenedor pequeño SEPARADO (el jengibre huele fuerte)',
         timer_segundos: null
       },
       {
-        texto: 'PASO 5: PICA CEBOLLA LARGA (MIN 2-8)\n\nPreparación: 150g de cebolla larga CRUDA\n\nTécnica:\n1. Lava bien la cebolla larga bajo agua fría\n2. Con cuchillo, corta en RODAJAS FINAS (2-3mm de grosor)\n3. Corta toda la cebolla (parte blanca Y parte verde)\n4. Coloca en un plato\n5. En total debes tener ~150g de cebolla picada\n\nDespués: Se guardará en contenedor en la nevera.',
-        timer_segundos: null
-      },
-      {
-        texto: 'PASO 6: RALLA JENGIBRE (MIN 2-8)\n\nPreparación: 1 raíz de jengibre fresco (~40-50g)\n\nTécnica:\n1. Pela bien el jengibre con un cuchillo (quita la piel café clara)\n2. Coloca sobre tabla de corte\n3. Usando un RALLADOR FINO (el lado con agujeros pequeños), ralla hacia abajo\n4. Recoge lo rallado en un plato\n5. Debes tener ~30g de jengibre rallado (fibras cortas y jugosas)\n\nNota: El jengibre picado NO sirve. Debe ser RALLADO (fibras muy finas).',
-        timer_segundos: null
-      },
-      {
-        texto: 'PASO 7: COCINA EL POLLO (MIN 10, después de cortarlo)\n\nPreparación: Las 195g de pollo en tiras que cortaste + 10g de ghee\n\nProceso:\n1. Pon una sartén antiadherente GRANDE (24-26cm) a FUEGO MEDIO-ALTO (posición 6-7)\n2. Espera 1 minuto\n3. Agrega 10g de ghee. Debe derretirse rápido y verse brillante\n4. Agrega TODAS las tiras de pollo de una vez\n5. Cocina SIN REVOLVER durante 2-3 minutos hasta que los bordes se vean DORADOS (color café claro)\n6. LUEGO revuelve. Cocina 3-4 minutos más, moviendo constantemente\n7. El pollo está LISTO cuando:\n   - Exterior: DORADO (café claro, no blanco)\n   - Interior: Blanco firme (presiona con espátula, no debe soltar líquido)\n   - TIEMPO TOTAL: 8-10 minutos desde que lo pusiste\n\n⚠️ No cocines de más o queda seco.',
+        texto: 'PASO 5 — COCINA EL POLLO (MIN 10–20)\n\n195 g de pollo crudo en tiras + 10 g de ghee.\n\n1. Sartén antiadherente grande (24–26 cm) a FUEGO MEDIO-ALTO (posición 6–7 de 9)\n2. Espera 1 minuto; agrega los 10 g de ghee — debe derretirse rápido y verse brillante\n3. Agrega todas las tiras de una vez\n4. SIN revolver durante 2–3 min hasta que los bordes se vean dorados (café claro)\n5. Revuelve; cocina 3–4 min más moviendo constantemente\n6. Listo cuando: exterior dorado, interior blanco firme, no suelta líquido al presionar\n\nTiempo total: 8–10 min.',
         timer_segundos: 600
       },
       {
-        texto: 'PASO 8: DIVIDE POLLO INMEDIATAMENTE (MIN 20, JUSTO DESPUÉS DE COCINAR)\n\nEl pollo debe estar CALIENTE cuando lo dividas.\n\nDivisión:\n\n📦 CONTENEDOR A - POLLO CUBOS (135g para Lunes Teriyaki):\n1. Saca 135g de pollo cocido de la sartén\n2. Coloca sobre tabla de corte LIMPIA\n3. Corta en CUBOS pequeños (aproximadamente 2cm × 2cm)\n4. Coloca en CONTENEDOR HERMÉTICO DE VIDRIO (separado)\n5. Etiqueta: "POLLO CUBOS - Lunes almuerzo Teriyaki"\n6. Cierra bien\n7. A la NEVERA INMEDIATAMENTE\n\n📦 CONTENEDOR B - POLLO DESHILACHADO (60g para Miércoles Soboro):\n1. Saca los 60g restantes de pollo cocido\n2. Coloca en otro CONTENEDOR HERMÉTICO DE VIDRIO (SEPARADO del A)\n3. Con DOS TENEDORES, desmenúzalo: Agarra con ambos tenedores en direcciones opuestas y tira suavemente hasta que quede todo deshilachado (trozos pequeños)\n4. Etiqueta: "POLLO DESHILACHADO - Miércoles almuerzo Soboro"\n5. Cierra bien\n6. A la NEVERA INMEDIATAMENTE\n\n⚠️ IMPORTANTE: DOS CONTENEDORES DIFERENTES. No mezcles.',
+        texto: 'PASO 6 — DIVIDE EL POLLO COCIDO (MIN 20, JUSTO DESPUÉS DE COCINAR)\n\n195 g crudo cocinados rinden ~156 g cocidos en total.\nDivide mientras el pollo está caliente — es más fácil.\n\n📦 CONTENEDOR A — LUNES almuerzo (Chicken Teriyaki):\n  • Pesa ~108 g de pollo cocido en la gramera\n  • Corta en cubos de ~2 cm\n  • Etiqueta: "POLLO CUBOS — Lunes almuerzo"\n  • A la NEVERA inmediatamente\n\n📦 CONTENEDOR B — MIÉRCOLES almuerzo (Egg Soboro):\n  • Los ~48 g restantes\n  • Desmenúzalos con dos tenedores hasta quedar en hebras finas\n  • Etiqueta: "POLLO DESHILACHADO — Miércoles almuerzo"\n  • A la NEVERA inmediatamente\n\n⚠️ La pérdida de peso al cocinar es normal (el calor evapora agua):\n   135 g crudo → ~108 g cocido   ·   60 g crudo → ~48 g cocido',
         timer_segundos: null
       },
       {
-        texto: 'PASO 9: MARINADA DE RES (MIN 21, DESPUÉS DE COCINAR POLLO)\n\nPreparación: Las 110g de res en tiras CRUDA + marinada\n\nMarinada (mezcla):\n1. En un TAZÓN pequeño, mezcla:\n   - 7.5ml de salsa de soya (aproximadamente 1.5 cucharaditas)\n   - 2.5ml de mirin (aproximadamente 0.5 cucharadita)\n   - 2.5g de jengibre rallado (la que acabas de rallar)\n2. Remueve bien con una cuchara\n\nAhora agrega la res:\n1. Vierte las tiras de res en el tazón\n2. Remueve bien hasta que TODAS las tiras estén cubiertas por la marinada\n3. Coloca TODA la mezcla (res + marinada) en un CONTENEDOR HERMÉTICO o BOLSA HERMÉTICA\n4. Etiqueta: "RES MARINADA - Martes almuerzo Gyudon. USAR SOLO MARTES"\n5. A la NEVERA (NO congelador)\n\n⚠️ IMPORTANTE: Esta res solo dura 2 días. Úsala SOLO el martes. No congelador.',
+        texto: 'PASO 7 — MARINADA DE RES (MIN 21)\n\n110 g de res en tiras CRUDA — para el Martes almuerzo (Gyudon).\n\nEn un tazón, mezcla:\n  • 7.5 ml de salsa de soya (~1.5 cucharaditas)\n  • 2.5 ml de mirin (~0.5 cucharadita)\n  • 5 g de jengibre rallado (del Paso 4)\nRevuelve bien. Agrega las tiras de res y cubre completamente.\n\n1. Pasa todo (res + marinada) a contenedor hermético o bolsa\n2. Etiqueta: "RES MARINADA — Martes almuerzo Gyudon"\n3. A la NEVERA (NO congelador)\n\n⚠️ Dura máximo 2 días. Úsala SOLO el martes.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 10: GUARDA CEBOLLA Y JENGIBRE (MIN 22)\n\n📦 CEBOLLA LARGA (150g):\n1. Coloca todos los 150g de cebolla picada en un CONTENEDOR HERMÉTICO\n2. Etiqueta: "CEBOLLA LARGA - Lunes/Martes/Miércoles almuerzo"\n3. A la NEVERA\n\n📦 JENGIBRE RALLADO (30g):\n1. Coloca todos los 30g de jengibre rallado en un CONTENEDOR PEQUEÑO SEPARADO\n2. Etiqueta: "JENGIBRE - Marinada + condimento"\n3. A la NEVERA en un lugar SEPARADO de los otros (huele intenso)\n\n✅ El arroz debe estar listo para este momento también.',
+        texto: 'PASO 8 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n570 g crudo rinden ~1,425 g cocidos. Divide en 5 porciones.\n\n🍚 Lunes almuerzo (Teriyaki): 325 g cocido\n🍚 Martes almuerzo (Gyudon): 275 g cocido\n🍚 Miércoles almuerzo (Soboro): 325 g cocido\n🍚 Martes cena (Tofu Don): 250 g cocido\n🍚 Miércoles cena (Tofu Tamago): 250 g cocido\n\nOpciones para guardar:\nA) Un contenedor grande — pesa al usar\nB) 5 contenedores etiquetados — más rápido en el día\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 11: GUARDA ARROZ (MIN 20, CUANDO LA ARROCERA AVISA QUE ESTÁ LISTO)\n\n1. Abre la arrocera\n2. El arroz estará CALIENTE (ten cuidado)\n3. Espera 2 minutos a que enfríe un poco\n4. Con una cuchara de madera o plástico (no metal), remueve el arroz suavemente\n5. Coloca EN UN CONTENEDOR HERMÉTICO DE VIDRIO GRANDE\n6. Cierra bien\n7. Etiqueta: "ARROZ - Lunes/Martes/Miércoles almuerzo" + fecha de hoy\n8. A la NEVERA\n\n📌 Rendimiento: 550g de arroz crudo rinde ~1.375 kg cocido\n   - Lunes: 325g cocido (150g del almuerzo)\n   - Martes: 275g cocido (110g del almuerzo)\n   - Miércoles: 325g cocido (150g del almuerzo)',
+        texto: 'PASO 9 — ABRE EL TOFU (MIN 22)\n\n400 g de Tofu Mori-Nu Silken en total para esta semana (abre 2 paquetes, usa 400 g):\n  • 80 g → Lunes cena (Miso Udon)\n  • 200 g → Martes cena (Tofu Don)\n  • 120 g → Miércoles cena (Tofu Tamago)\n\n⚠️ El tofu Silken es muy delicado — ábrelo con cuidado y no lo agites.\nGuarda en contenedor de VIDRIO hermético (no plástico).\nEtiqueta con el día y los gramos. A la NEVERA inmediatamente.\n\nLos 220 g restantes del segundo paquete quedan para el batch del miércoles.',
         timer_segundos: null
       },
       {
-        texto: 'CHECKLIST FINAL (MIN 45-50)\n\nVerifica que TODO está en la NEVERA, ETIQUETADO y LISTO:\n\n☐ ARROZ - Contenedor hermético, etiquetado, nevera\n☐ POLLO CUBOS - Contenedor hermético A, etiquetado, nevera\n☐ POLLO DESHILACHADO - Contenedor hermético B (SEPARADO), etiquetado, nevera\n☐ RES MARINADA - Contenedor hermético, etiquetado, NEVERA (NO congelador)\n☐ TOFU - Contenedor hermético, etiquetado, nevera\n☐ CEBOLLA LARGA - Contenedor hermético, etiquetado, nevera\n☐ JENGIBRE - Contenedor hermético SEPARADO, etiquetado, nevera\n\n✅ SI TODOS ESTÁN MARCADOS: Batch cooking terminado. Lunes, Martes, Miércoles preparados.',
+        texto: 'CHECKLIST FINAL (MIN 45–50)\n\nVerifica que TODO está en NEVERA, etiquetado:\n\n☐ POLLO CUBOS (~108 g) — Lunes almuerzo\n☐ POLLO DESHILACHADO (~48 g) — Miércoles almuerzo\n☐ RES MARINADA (110 g crudo) — Martes almuerzo (NO va al congelador)\n☐ ARROZ (~1,425 g cocido) — Lun/Mar/Mié almuerzos + Mar/Mié cenas\n☐ TOFU (400 g en vidrio) — Lun/Mar/Mié cenas\n\n✅ Listo. Lunes, Martes y Miércoles están preparados.',
         timer_segundos: null
       }
     ],
     almacenamiento: [
-      '📦 NEVERA - ARROZ (550g crudo → 1.375kg cocido): 3 días — se usa Lunes/Martes/Miércoles almuerzo',
-      '📦 NEVERA - POLLO CUBOS (135g): 3 días — Lunes almuerzo LISTO',
-      '📦 NEVERA - POLLO DESHILACHADO (60g): 3 días — Miércoles almuerzo LISTO',
-      '❄️  NEVERA (NO congelador) - RES MARINADA (110g): máximo 2 días — Martes almuerzo LISTO',
-      '📦 NEVERA - TOFU (310g): 3 días — se usa Lunes/Martes/Miércoles cena',
-      '📦 NEVERA - CEBOLLA LARGA (150g picada): 3 días — Lunes/Martes/Miércoles almuerzo',
-      '📦 NEVERA (AISLADO del resto) - JENGIBRE (30g rallado): 3 días — marinada + condimento'
+      '📦 NEVERA — POLLO CUBOS (~108 g cocido): 3 días → Lunes almuerzo (Teriyaki)',
+      '📦 NEVERA — POLLO DESHILACHADO (~48 g cocido): 3 días → Miércoles almuerzo (Soboro)',
+      '❄️  NEVERA, NO CONGELADOR — RES MARINADA (110 g crudo): máximo 2 días → Martes almuerzo (Gyudon)',
+      '📦 NEVERA — ARROZ (570 g crudo → ~1,425 g cocido): 3 días → Lun 325g + Mar 275g + Mié 325g (almuerzo) y Mar 250g + Mié 250g (cena)',
+      '📦 NEVERA VIDRIO — TOFU (400 g): 3 días → Lun cena 80g · Mar cena 200g · Mié cena 120g'
     ]
   },
 
   miercoles_noche: {
-    titulo: 'Batch Cooking — Miércoles noche (cubre Jueves, Viernes)',
+    titulo: 'Batch Cooking — Miércoles noche',
     dia: 'miercoles_noche',
     tiempo_min: 35,
-    orden_sugerido: `⏱️ ORDEN EXACTO PARA 35 MINUTOS:
-MIN 0:   ENCIENDE ARROCERA con 420g arroz + 504ml agua (~15 min)
-MIN 2:   Corta pollo (135g), res (110g), ralla jengibre
-MIN 5:   ABRE TOFU NUEVO: pasa a contenedor
-MIN 8:   INICIA COCCIÓN POLLO en sartén (8-10 min)
-MIN 15:  ARROZ LISTO. Retira de arrocera.
-MIN 20:  POLLO LISTO. Divide en cubos. Marinada de res lista.
-MIN 30:  TODO en contenedores, etiquetado, nevera.
-FIN: 35 min. Jueves y Viernes listos.`,
+    nota: 'Cubre Jueves · Viernes almuerzos + Viernes/Sábado/Domingo cenas',
     tareas: [
       {
-        texto: 'PASO 1: ENCIENDE LA ARROCERA (MIN 0)\n\nPrepara: 420g de arroz blanco CRUDO + 504ml de AGUA FRÍA.\n\nInstrucciones:\n1. Abre la arrocera\n2. Coloca 420g de arroz crudo en el recipiente\n3. Agrega 504ml de agua fría\n4. Remueve bien\n5. Enciende la ARROCERA\n6. Ella sola te dirá cuando está lista (~15 minutos). Cambiará a "Mantener caliente"\n\nMientras se cocina, continúa con los siguientes pasos.',
+        texto: 'PASO 1 — ENCIENDE LA ARROCERA (MIN 0)\n\n540 g de arroz blanco crudo + 648 ml de agua fría.\n\n1. Coloca 540 g de arroz en el recipiente de la arrocera\n2. Agrega 648 ml de agua fría\n3. Remueve y enciende\n4. Lista en ~20 min — cambiará sola a "Mantener caliente"\n\nMientras se cocina, continúa con los siguientes pasos.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 2: CORTA POLLO (MIN 2-8)\n\nPreparación: 135g de pechuga de pollo CRUDA\n\nTécnica:\n1. Saca del refrigerador\n2. Coloca en tabla de corte LIMPIA\n3. Corta en TIRAS de 2-3cm de ancho (perpendicular a la fibra)\n4. Coloca todas en un plato\n\nNota: Este pollo se dividirá en CUBOS pequeños después de cocinarlo:\n• 70g cubos → Jueves Teriyaki\n• 65g cubos → Viernes Teriyaki',
+        texto: 'PASO 2 — CORTA EL POLLO (MIN 2–8)\n\n135 g de pechuga de pollo CRUDA — TODO para el Jueves almuerzo (Chicken Teriyaki).\n\n⚠️ Viernes almuerzo es Gyudon: lleva res, NO pollo. No cortes más.\n\nTécnica:\n1. Corta en tiras de 2–3 cm de ancho, perpendicular a la fibra\n2. Coloca en un plato',
         timer_segundos: null
       },
       {
-        texto: 'PASO 3: CORTA RES EN TIRAS FINAS (MIN 2-8)\n\nPreparación: 110g de res magra CRUDA\n\nTécnica IMPORTANTE:\n1. Saca del refrigerador\n2. Coloca en tabla de corte LIMPIA\n3. Identifica la FIBRA (líneas de la carne)\n4. Corta PERPENDICULAR a la fibra (ángulo 90 grados)\n5. Las tiras deben ser FINAS: 3-4mm de espesor\n6. Largo: 5-8cm\n7. Coloca en un plato SEPARADO\n\n⚠️ Perpendicular = más tierno al comer.',
+        texto: 'PASO 3 — CORTA LA RES EN TIRAS (MIN 2–8)\n\n110 g de res magra CRUDA — TODO para el Viernes almuerzo (Gyudon).\nNO se cocina — va directo a la marinada.\n\n⚠️ Jueves almuerzo es Teriyaki: lleva pollo, NO res.\n\nTécnica:\n1. Corta PERPENDICULAR a la fibra (90°)\n2. Tiras finas: 3–4 mm de espesor, 5–8 cm de largo\n3. Coloca en plato APARTE del pollo',
         timer_segundos: null
       },
       {
-        texto: 'PASO 4: ABRE TOFU NUEVO (MIN 5)\n\nPreparación: 1 paquete NUEVO de TOFU MORI-NU SILKEN (310g)\n\nInstrucciones:\n1. Saca del refrigerador\n2. Abre cuidadosamente (es frágil)\n3. Vierte TODO en CONTENEDOR HERMÉTICO DE VIDRIO\n4. Cierra bien\n5. Etiqueta: "TOFU - Jueves/Viernes CENA" + fecha de hoy\n6. A la NEVERA INMEDIATAMENTE',
+        texto: 'PASO 4 — RALLA JENGIBRE (MIN 2–8)\n\n10 g de jengibre rallado para la marinada de res.\n\n1. Pela el jengibre con cuchillo\n2. Ralla con rallador fino hacia abajo\n3. Recoge en un platito',
         timer_segundos: null
       },
       {
-        texto: 'PASO 5: RALLA JENGIBRE (MIN 2-8)\n\nPreparación: ~40-50g de raíz de jengibre fresco\n\nTécnica:\n1. Pela bien la piel café del jengibre\n2. Coloca sobre tabla\n3. Con RALLADOR FINO, ralla hacia abajo\n4. Recoge en un plato\n5. Debes tener ~10-12g de jengibre rallado (solo necesitas menos esta vez que domingo)\n\nNota: Debe ser RALLADO (fibras finas), no picado.',
-        timer_segundos: null
-      },
-      {
-        texto: 'PASO 6: COCINA POLLO (MIN 10)\n\nPreparación: Las 135g de pollo en tiras + 5g de ghee\n\nProceso:\n1. Pon sartén antiadherente GRANDE a FUEGO MEDIO-ALTO (posición 6-7)\n2. Espera 1 minuto\n3. Agrega 5g de ghee. Debe verse brillante\n4. Agrega TODAS las tiras de pollo\n5. Cocina SIN REVOLVER 2-3 minutos hasta DORADO\n6. Revuelve. Cocina 3-4 minutos más, moviendo\n7. LISTO cuando:\n   - Exterior: DORADO (café claro)\n   - Interior: Blanco firme\n   - TIEMPO TOTAL: 8-10 minutos\n\n⚠️ No cocines de más.',
+        texto: 'PASO 5 — COCINA EL POLLO (MIN 10–20)\n\n135 g de pollo crudo + 5 g de ghee → rinde ~108 g cocidos.\nTODO va al Jueves almuerzo.\n\n1. Sartén antiadherente grande a FUEGO MEDIO-ALTO (6–7 de 9)\n2. Espera 1 minuto; agrega los 5 g de ghee\n3. Agrega el pollo; SIN revolver 2–3 min hasta bordes dorados\n4. Revuelve; cocina 3–4 min más\n5. Listo: exterior dorado, interior blanco firme\n\nCorta en cubos de ~2 cm mientras está caliente.\n📦 Contenedor: "POLLO CUBOS (~108 g) — Jueves almuerzo"\nA la NEVERA inmediatamente.',
         timer_segundos: 600
       },
       {
-        texto: 'PASO 7: DIVIDE POLLO EN CUBOS (MIN 20, INMEDIATAMENTE DESPUÉS)\n\nEl pollo debe estar CALIENTE.\n\nDivisión para Jueves Y Viernes:\n1. Saca el pollo cocido de la sartén\n2. Coloca en tabla de corte LIMPIA\n3. Corta en CUBOS pequeños (2cm × 2cm)\n4. Debe salirte ~110g total de pollo en cubos\n5. Divide mentalmente:\n   - 70g cubos → Jueves\n   - 65g cubos → Viernes\n6. Coloca TODO en UN SOLO CONTENEDOR HERMÉTICO DE VIDRIO\n7. Etiqueta: "POLLO CUBOS - Jueves/Viernes almuerzo Teriyaki"\n8. Cierra bien\n9. A la NEVERA INMEDIATAMENTE\n\nNota: Esta vez todo va en UN contenedor (a diferencia de domingo que fue dos contenedores).',
+        texto: 'PASO 6 — MARINADA DE RES (MIN 21)\n\n110 g de res en tiras CRUDA — para el Viernes almuerzo (Gyudon).\n\nEn un tazón, mezcla:\n  • 7.5 ml de salsa de soya (~1.5 cucharaditas)\n  • 2.5 ml de mirin (~0.5 cucharadita)\n  • 5 g de jengibre rallado (del Paso 4)\nRevuelve. Agrega las tiras de res y cubre completamente.\n\n1. Pasa todo a contenedor hermético o bolsa\n2. Etiqueta: "RES MARINADA (110 g) — Viernes almuerzo Gyudon"\n3. A la NEVERA (NO congelador)\n\n⚠️ Dura máximo 2 días.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 8: MARINADA DE RES (MIN 21)\n\nPreparación: Las 110g de res en tiras CRUDA + marinada\n\nMarinada:\n1. En un TAZÓN, mezcla:\n   - 7.5ml de salsa de soya (~1.5 cucharaditas)\n   - 2.5ml de mirin (~0.5 cucharadita)\n   - 2.5g de jengibre rallado\n2. Remueve bien\n\nAgrega res:\n1. Vierte las tiras de res\n2. Remueve hasta que TODAS estén cubiertas\n3. Coloca TODO (res + marinada) en CONTENEDOR HERMÉTICO o BOLSA\n4. Etiqueta: "RES MARINADA - Jueves/Viernes almuerzo Gyudon"\n5. A la NEVERA (NO congelador)\n\n⚠️ Dura 2 días máximo. Se divide en dos almuerzos:\n   - Jueves: 55g\n   - Viernes: 55g',
+        texto: 'PASO 7 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n540 g crudo rinden ~1,350 g cocidos. Divide en 5 porciones.\n\n🍚 Jueves almuerzo (Teriyaki): 325 g cocido\n🍚 Viernes almuerzo (Gyudon): 275 g cocido\n🍚 Viernes cena (Tofu Don): 250 g cocido\n🍚 Sábado cena (Tofu Tamago): 250 g cocido\n🍚 Domingo cena (Tofu Tamago): 250 g cocido\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 9: GUARDA ARROZ (MIN 15, CUANDO ARROCERA AVISA)\n\n1. Abre la arrocera\n2. Espera 2 minutos a que enfríe un poco (está caliente)\n3. Con cuchara de madera/plástico, remueve suavemente\n4. Coloca en CONTENEDOR HERMÉTICO DE VIDRIO GRANDE\n5. Cierra bien\n6. Etiqueta: "ARROZ - Jueves/Viernes almuerzo" + fecha\n7. A la NEVERA\n\n📌 Rendimiento: 420g crudo rinde ~1.050kg cocido\n   - Jueves: 275g cocido (110g del almuerzo)\n   - Viernes: 275g cocido (110g del almuerzo)',
+        texto: 'PASO 8 — ABRE EL TOFU (MIN 22)\n\n520 g de Tofu Mori-Nu Silken en total (usa los paquetes restantes de la semana):\n  • 80 g → Jueves cena (Miso Udon)\n  • 200 g → Viernes cena (Tofu Don)\n  • 120 g → Sábado cena (Tofu Tamago)\n  • 120 g → Domingo cena (Tofu Tamago)\n\n⚠️ Tofu Silken es delicado — ábrelo con cuidado.\nGuarda en contenedor de VIDRIO hermético, etiquetado. A la NEVERA.',
         timer_segundos: null
       },
       {
-        texto: 'CHECKLIST FINAL (MIN 30-35)\n\nVerifica que TODO está en NEVERA, ETIQUETADO y LISTO:\n\n☐ ARROZ - Contenedor hermético, etiquetado, nevera\n☐ POLLO CUBOS - Contenedor hermético, etiquetado, nevera\n☐ RES MARINADA - Contenedor hermético, etiquetado, NEVERA (NO congelador)\n☐ TOFU - Contenedor hermético, etiquetado, nevera\n\n✅ SI TODOS ESTÁN: Batch cooking terminado. Jueves y Viernes preparados.',
+        texto: 'CHECKLIST FINAL (MIN 30–35)\n\nVerifica que TODO está en NEVERA, etiquetado:\n\n☐ POLLO CUBOS (~108 g cocido) — Jueves almuerzo\n☐ RES MARINADA (110 g crudo) — Viernes almuerzo (NO va al congelador)\n☐ ARROZ (~1,350 g cocido) — Jue/Vie almuerzos + Vie/Sáb/Dom cenas\n☐ TOFU (520 g en vidrio) — Jue/Vie/Sáb/Dom cenas\n\n✅ Listo. Jueves y Viernes + cenas hasta el Domingo preparados.',
         timer_segundos: null
       }
     ],
     almacenamiento: [
-      '📦 NEVERA - ARROZ (420g crudo → 1.050kg cocido): 3 días — Jueves/Viernes almuerzo',
-      '📦 NEVERA - POLLO CUBOS (110g): 3 días — Jueves (70g) + Viernes (65g) almuerzo',
-      '❄️  NEVERA (NO congelador) - RES MARINADA (110g): máximo 2 días — Jueves (55g) + Viernes (55g) almuerzo',
-      '📦 NEVERA - TOFU (310g): 3 días — Jueves/Viernes cena'
+      '📦 NEVERA — POLLO CUBOS (~108 g cocido): 3 días → Jueves almuerzo (Teriyaki)',
+      '❄️  NEVERA, NO CONGELADOR — RES MARINADA (110 g crudo): máximo 2 días → Viernes almuerzo (Gyudon)',
+      '📦 NEVERA — ARROZ (540 g crudo → ~1,350 g cocido): hasta 5 días → Jue 325g + Vie 275g (almuerzo) y Vie 250g + Sáb 250g + Dom 250g (cena)',
+      '📦 NEVERA VIDRIO — TOFU (520 g): hasta 4 días → Jue cena 80g · Vie cena 200g · Sáb cena 120g · Dom cena 120g'
     ]
   },
 
   sabado: {
-    titulo: 'Sábado — Todo fresco, SIN batch cooking',
+    titulo: 'Sábado — Todo fresco, sin batch',
     dia: 'sabado',
     tiempo_min: 20,
-    nota: 'El salmón se cocina el MISMO DÍA (no congela bien recalentado). Arroz también fresco.',
+    nota: 'El salmón no se puede congelar/recalentar bien. El arroz también es fresco hoy.',
     tareas: [
       {
-        texto: 'SÁBADO ALMUERZO - ARROZ FRESCO:\n\nPreparación: 125g de arroz blanco CRUDO (SOLO para sábado almuerzo)\n\nInstrucciones:\n1. MAÑANA del sábado (o el viernes noche), mide 125g de arroz crudo\n2. En tu ARROCERA, coloca 125g de arroz\n3. Agrega 155ml de agua fría (proporción 1:1.24)\n4. Remueve bien\n5. Enciende la arrocera\n6. Ella te dirá cuando esté listo (~15 minutos)\n7. El arroz rendirá ~315g cocido\n8. Úsalo FRESCO para el almuerzo del sábado\n\n⚠️ IMPORTANTE: Este NO viene del batch. Es fresco el sábado mismo.',
+        texto: 'SÁBADO ALMUERZO — ARROZ FRESCO\n\n125 g de arroz blanco crudo (solo para el almuerzo de hoy).\n\n1. Mide 125 g de arroz\n2. En la arrocera con 155 ml de agua fría (proporción 1:1.24)\n3. Remueve y enciende\n4. Lista en ~15 min → rinde ~315 g cocido\n5. Usa fresco para el almuerzo\n\n⚠️ Este arroz NO viene del batch. Es fresco, cocínalo hoy.',
         timer_segundos: null
       },
       {
-        texto: 'SÁBADO ALMUERZO - SALMÓN FRESCO:\n\nPreparación: 130g de filete de salmón FRESCO\n\nCompra: \n• Sábado por la MAÑANA en el mercado o supermercado\n• Pide que te lo corten: "130 gramos de salmón filete, con piel"\n• Guarda en el refrigerador en una bolsa hermética\n\nCocción:\n• Ver la receta SALMON_DON en la app\n• Se cocina con air fryer el MISMO DÍA del almuerzo\n• El salmón NO se congela bien. Cocina FRESCO.\n• Úsalo el sábado almuerzo. No hagas batch.\n\n⚠️ IMPORTANTE: Salmón fresco, no congelado. Cocina el mismo día.',
+        texto: 'SÁBADO ALMUERZO — SALMÓN FRESCO\n\n130 g de filete de salmón FRESCO (comprado esta mañana).\n\n• Pídelo en el mercado esta mañana: "130 g de salmón filete, con piel"\n• Guárdalo en el refrigerador hasta el momento de cocinar\n• Se cocina con air fryer (ver la receta Salmon Don en la app)\n• Cocinar SIEMPRE el mismo día de la compra\n\n⚠️ Salmón fresco, no congelado. No se puede guardar para el día siguiente.',
         timer_segundos: null
       }
     ],
     almacenamiento: [
-      '🍚 ARROZ - Cocina FRESCO el sábado almuerzo (125g crudo → 315g cocido)',
-      '🐟 SALMÓN - Compra FRESCO el sábado por la mañana, cocina el MISMO día con air fryer'
+      '🍚 ARROZ — Cocina FRESCO el sábado almuerzo (125 g crudo → ~315 g cocido)',
+      '🐟 SALMÓN — Comprar FRESCO sábado por la mañana. Cocinar el mismo día con air fryer.'
     ]
   }
 };
