@@ -233,20 +233,12 @@ function renderizarDashboard() {
   questsList.innerHTML = '';
 
   const quests = [
+    { id: 'desayuno', nombre: 'Desayuno — Okayu Miso Tamago', tipo: 'desayuno', receta: 'okayu_miso_tamago' },
     { id: 'batido', nombre: 'Batido post-entreno', tipo: 'batido', receta: 'batido_post_entreno' },
   ];
 
-  if (diaDelMes !== 'domingo') {
-    quests.push({ id: 'almuerzo', nombre: `Almuerzo — ${rutina.almuerzo}`, tipo: 'almuerzo', receta: rutina.almuerzo });
-  } else {
-    quests.push({ id: 'almuerzo', nombre: 'Almuerzo libre — sin registrar', tipo: 'almuerzo', receta: null });
-  }
-
-  if (diaDelMes !== 'domingo') {
-    quests.push({ id: 'cena', nombre: `Cena — ${rutina.cena}`, tipo: 'cena', receta: rutina.cena });
-  } else {
-    quests.push({ id: 'cena', nombre: 'Cena libre — sopa miso ligera', tipo: 'cena', receta: null });
-  }
+  quests.push({ id: 'almuerzo', nombre: `Almuerzo — ${rutina.almuerzo}`, tipo: 'almuerzo', receta: rutina.almuerzo });
+  quests.push({ id: 'cena', nombre: `Cena — ${rutina.cena}`, tipo: 'cena', receta: rutina.cena });
 
   if (rutina.batch_cooking) {
     quests.push({ id: 'batch', nombre: 'Batch cooking', tipo: 'batch_cooking', receta: null });
@@ -557,8 +549,8 @@ function renderizarMercado() {
       <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.presupuesto}</p>
       <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.consistencia}</p>
       <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.salmon_fresco}</p>
-      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.tofu_critico}</p>
-      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.sobrantes}</p>
+      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.tofu_nota}</p>
+      <p class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">${notas.huevos_nota}</p>
     </div>
   `;
 

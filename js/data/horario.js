@@ -23,7 +23,7 @@ export const RUTINA_SEMANAL = {
   jueves: { nombre: 'Jueves', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo' },
   viernes: { nombre: 'Viernes', entrenamiento: 'Pierna', almuerzo: 'gyudon', cena: 'tofu_don_espinaca' },
   sabado: { nombre: 'Sabado', entrenamiento: 'Descanso', almuerzo: 'salmon_don', cena: 'sopa_miso_arroz_tofu' },
-  domingo: { nombre: 'Domingo', entrenamiento: 'Descanso', almuerzo: 'libre', cena: 'libre', batch_cooking: true }
+  domingo: { nombre: 'Domingo', entrenamiento: 'Descanso', almuerzo: 'tamagoyaki_don', cena: 'sopa_miso_arroz_tofu', batch_cooking: true }
 };
 
 export const getDiaDelMes = () => {

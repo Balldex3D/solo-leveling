@@ -140,7 +140,8 @@ export function abrirRecetaOverlay(recetaId, onModoGuiado = null) {
   });
 
   // Mostrar botón de cronómetro
-  document.getElementById('btn-activar-cronometro').addEventListener('click', abrirCronometro);
+  const btnCrono = document.getElementById('btn-activar-cronometro');
+  if (btnCrono) btnCrono.onclick = abrirCronometro;
 }
 
 function cerrarOverlayReceta() {
@@ -154,7 +155,7 @@ function abrirFotoGrande() {
   if (!recetaActualOverlay) return;
   // Aquí se podría abrir un modal con la foto más grande, pero por ahora
   // solo se abre en el navegador
-  window.open(recetaActualOverlay.foto_url, '_blank');
+  if (recetaActualOverlay?.foto_url) window.open(recetaActualOverlay.foto_url, '_blank');
 }
 
 // ============ CRONÓMETRO ============

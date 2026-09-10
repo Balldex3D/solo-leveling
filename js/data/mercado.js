@@ -21,8 +21,8 @@ export const MERCADO = {
     {
       id: 'huevos',
       producto: 'Huevos',
-      cantidad: '11 unidades',
-      nota: 'Lun cena (Miso Udon) 2 · Mar almuerzo (Gyudon) 1 · Mar cena (Tofu Don) 1 · Mié cena (Tofu Tamago) 1 · Jue cena (Miso Udon) 2 · Vie almuerzo (Gyudon) 1 · Vie cena (Tofu Don) 1 · Sáb cena 1 · Dom cena 1. El batido NO lleva huevo.'
+      cantidad: '24 unidades',
+      nota: 'Desayuno okayu ×7 (1 c/u) · Mar almuerzo Gyudon 1 · Mié almuerzo Soboro 3 · Dom almuerzo Tamagoyaki 3 · Lun cena Miso Udon 2 · Mar cena Tofu Don 1 · Mié cena Sopa Miso 1 · Jue cena Miso Udon 2 · Vie almuerzo Gyudon 1 · Vie cena Tofu Don 1 · Sáb cena Sopa Miso 1 · Dom cena Sopa Miso 1 = 24 ud. El batido NO lleva huevo.'
     },
     {
       id: 'tofu',
@@ -39,14 +39,14 @@ export const MERCADO = {
     {
       id: 'cebolla_larga',
       producto: 'Cebolla larga',
-      cantidad: '2 manojos (~250 g)',
-      nota: 'Para almuerzos y cenas toda la semana (~191 g en recetas + picada extra para batch). Parte verde y blanca.'
+      cantidad: '3 manojos (~300 g)',
+      nota: '~290 g/semana: desayuno okayu ×7 (10 g c/u) = 70 g + almuerzos y cenas toda la semana ~220 g. Parte verde y blanca. Se ralla o pica en el día, no en el batch.'
     },
     {
       id: 'jengibre',
       producto: 'Jengibre fresco',
-      cantidad: '80 g',
-      nota: 'Batch domingo 10–15 g (marinada res) · Batch miércoles 10 g · Recetas de la semana ~55 g (5 g por plato en Teriyaki × 2, Gyudon × 2, Soboro, etc.).'
+      cantidad: '30 g',
+      nota: 'Marinadas batch ×2 (5 g c/u) = 10 g + recetas de la semana ~20 g (5 g en Teriyaki ×2, Gyudon ×2). Se ralla fresco en el día, no en el batch.'
     },
     {
       id: 'banano',
@@ -61,7 +61,7 @@ export const MERCADO = {
       id: 'arroz',
       producto: 'Arroz blanco',
       cantidad: '5 kg',
-      nota: '~1,235 g/semana: batch domingo 570 g + batch miércoles 540 g + sábado almuerzo fresco 125 g.'
+      nota: '~1,185 g/semana: batch domingo 495 g + batch miércoles 605 g + sábado almuerzo fresco 85 g.'
     },
     {
       id: 'udon',
@@ -78,38 +78,38 @@ export const MERCADO = {
     {
       id: 'miso',
       producto: 'Pasta miso',
-      cantidad: '500 g',
-      nota: '~100 g/semana: 20 g Miso Udon × 2 = 40 g + 20 g Tofu Tamago × 3 = 60 g. Total: 100 g.'
+      cantidad: '750 g',
+      nota: '~170 g/semana: desayuno okayu ×7 (10 g c/u) = 70 g + Miso Udon ×2 (20 g c/u) = 40 g + Sopa Miso ×3 (20 g c/u) = 60 g. Total: 170 g.'
     },
     {
       id: 'mirin',
       producto: 'Mirin',
       cantidad: '375 ml',
-      nota: '~50 ml/semana: marinadas (2.5 ml × 2 batch) + recetas Teriyaki × 2 (10 ml c/u) + Gyudon × 2 (10 ml c/u) + Soboro (10 ml).'
+      nota: '~50 ml/semana: marinadas (2.5 ml × 2 batch) + recetas Teriyaki × 2 (10 ml c/u) + Gyudon × 2 (10 ml c/u) + Soboro (10 ml) + Tamagoyaki (5 ml).'
     },
     {
       id: 'sesamo_oil',
       producto: 'Aceite de sésamo',
-      cantidad: '250 ml',
-      nota: '~60 ml/semana: Teriyaki × 2 (5 ml) + Soboro (5 ml) + Tofu Don × 2 (5 ml) + Miso Udon × 2 (7 ml) + Tofu Tamago × 3 (7 ml).'
+      cantidad: '500 ml',
+      nota: '~95 ml/semana: desayuno okayu ×7 (5 ml) = 35 ml + Teriyaki ×2 (5 ml) + Soboro (5 ml) + Tamagoyaki (5 ml) + Tofu Don ×2 (5 ml) + Miso Udon ×2 (7 ml) + Sopa Miso ×3 (7 ml).'
     },
     {
       id: 'sesamo_semillas',
       producto: 'Sésamo semillas',
       cantidad: '200 g',
-      nota: '~40 g/semana: 5 g de topping en Teriyaki × 2, Gyudon × 2, Soboro, Salmon Don, Tofu Don × 2.'
+      nota: '~45 g/semana: 5 g de topping en okayu ×7, Teriyaki ×2, Gyudon ×2, Soboro, Salmon Don, Tofu Don ×2, Tamagoyaki.'
     },
     {
       id: 'nori',
       producto: 'Nori (alga)',
-      cantidad: '10 hojas',
-      nota: '~12 g/semana: 2 g en Miso Udon × 2 + 2 g en Tofu Tamago × 3 + 2 g en Salmon Don.'
+      cantidad: '50 hojas (5 paquetes de 10)',
+      nota: '~26 g/semana: okayu desayuno ×7 (2 g c/u) = 14 g + Miso Udon ×2 (2 g) = 4 g + Sopa Miso ×3 (2 g) = 6 g + Salmon Don (2 g) = 2 g.'
     },
     {
       id: 'ghee',
       producto: 'Ghee clarificado',
       cantidad: '250 g',
-      nota: '~60 g/semana: batch domingo pollo 10 g + batch miércoles pollo 5 g + Teriyaki × 2 (7 g) + Gyudon × 2 (5 g) + Tofu Don × 2 (10 g).'
+      nota: '~60 g/semana: batch domingo pollo 10 g + batch miércoles pollo 5 g + Teriyaki ×2 (7 g) + Gyudon ×2 (5 g) + Tofu Don ×2 (10 g) + Tamagoyaki (5 g).'
     },
     {
       id: 'aceite_oliva',
@@ -127,7 +127,7 @@ export const MERCADO = {
       id: 'salsa_soya',
       producto: 'Salsa de soya',
       cantidad: '500 ml',
-      nota: '~115 ml/semana: Teriyaki × 2 (15 ml) + Gyudon × 2 (15 ml) + Soboro (10 ml) + Salmon Don (10 ml) + Tofu Don × 2 (15 ml) + marinadas batch (15 ml).'
+      nota: '~115 ml/semana: Teriyaki ×2 (15 ml) + Gyudon ×2 (15 ml) + Soboro (10 ml) + Salmon Don (10 ml) + Tofu Don ×2 (15 ml) + Tamagoyaki (10 ml) + marinadas batch (15 ml).'
     },
     {
       id: 'maicena',
@@ -155,7 +155,7 @@ export const MERCADO = {
     consistencia: 'Lo que se compra = exactamente lo que usan las recetas. Ningún ingrediente falta ni sobra sin razón.',
     salmon_fresco: 'El salmón se compra FRESCO el sábado por la mañana. Se cocina ese mismo día. No se puede guardar para el día siguiente.',
     tofu_nota: 'Abierto, el tofu Mori-Nu dura 3 días en nevera. Usar siempre contenedor de vidrio. Se necesitan 920 g/semana (3 paquetes de ~310 g).',
-    huevos_nota: 'El batido post-entreno NO lleva huevo. Los 11 huevos son 100% para recetas de almuerzo y cena.'
+    huevos_nota: 'Se necesitan 24 huevos/semana: 7 para desayunos okayu + 17 para almuerzos y cenas. El batido post-entreno NO lleva huevo.'
   }
 };
 

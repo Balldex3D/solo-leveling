@@ -37,12 +37,14 @@ export function totalesDelDia(fecha, ajusteFase1 = false) {
 
   if (!rutina) return null;
 
-  // Domingo es no verificable (almuerzo libre, cena sin receta fija)
-  if (dia === 'domingo') {
-    return { verificable: false };
-  }
-
   let totales = { kcal: 0, proteina: 0, grasa: 0, carbo: 0 };
+
+  // Desayuno (todos los dias)
+  const desayuno = macrosDeReceta('okayu_miso_tamago', false);
+  totales.kcal += desayuno.kcal;
+  totales.proteina += desayuno.proteina;
+  totales.grasa += desayuno.grasa;
+  totales.carbo += desayuno.carbo;
 
   // Batido (todos los dias)
   const batido = macrosDeReceta('batido_post_entreno', false);
@@ -113,19 +115,19 @@ export function progresoVsMeta(totales, ajusteFase1 = false) {
 /** Auto-chequeo: verificar que los totales coinciden con el documento auditado. */
 export function autoVerificar() {
   const esperados = {
-    lunes: { kcal: 1976, proteina: 115.1, grasa: 53.1, carbo: 256.9 },
-    martes: { kcal: 2031, proteina: 111.2, grasa: 64.7, carbo: 250.5 },
-    miercoles: { kcal: 1970, proteina: 108.9, grasa: 55, carbo: 259.8 },
-    jueves: { kcal: 1976, proteina: 115.1, grasa: 53.1, carbo: 256.9 },
-    viernes: { kcal: 2031, proteina: 111.2, grasa: 64.7, carbo: 250.5 },
-    sabado: { kcal: 1976, proteina: 104.9, grasa: 59.9, carbo: 251.3 }
+    lunes:     { kcal: 2065, proteina: 121.6, grasa: 63.4, carbo: 249.0 },
+    martes:    { kcal: 2103, proteina: 117.3, grasa: 75.1, carbo: 238.6 },
+    miercoles: { kcal: 1972, proteina: 113.7, grasa: 65.2, carbo: 232.4 },
+    jueves:    { kcal: 2065, proteina: 121.6, grasa: 63.4, carbo: 249.0 },
+    viernes:   { kcal: 2103, proteina: 117.3, grasa: 75.1, carbo: 238.6 },
+    sabado:    { kcal: 2012, proteina: 110.2, grasa: 70.4, carbo: 231.6 },
+    domingo:   { kcal: 1933, proteina: 99.7,  grasa: 68.7, carbo: 229.4 }
   };
 
   const dias = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
   const errores = [];
 
   dias.forEach(dia => {
-    if (dia === 'domingo') return; // Domingo no es verificable
 
     const fecha = new Date();
     const indexDia = dias.indexOf(dia);
