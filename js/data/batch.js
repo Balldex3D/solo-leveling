@@ -18,7 +18,7 @@ export const BATCH_COOKING = {
         timer_segundos: null
       },
       {
-        texto: 'PASO 4 — COCINA EL POLLO (MIN 10–20)\n\n195 g de pollo crudo en tiras + 10 g de ghee.\n\n1. Sartén antiadherente grande (24–26 cm) a FUEGO MEDIO-ALTO (posición 6–7 de 9)\n2. Espera 1 minuto; agrega los 10 g de ghee — debe derretirse rápido y verse brillante\n3. Agrega todas las tiras de una vez\n4. SIN revolver durante 2–3 min hasta que los bordes se vean dorados (café claro)\n5. Revuelve; cocina 3–4 min más moviendo constantemente\n6. Listo cuando: exterior dorado, interior blanco firme, no suelta líquido al presionar\n\nTiempo total: 8–10 min.',
+        texto: 'PASO 4 — COCINA EL POLLO (MIN 10–20)\n\n195 g de pollo crudo en tiras + 10 g de ghee.\n\nTÉCNICA RENA WARE:\n1. Pon la sartén Rena Ware grande VACÍA Y SECA a FUEGO MEDIO-ALTO (posición 6–7 de 9)\n2. Espera 2–3 minutos. PRUEBA DE AGUA: echa 2–3 gotas con los dedos — si bailan y se evaporan en pocos segundos = lista. Si se quedan quietas = sigue esperando.\n3. Agrega los 10 g de ghee — debe derretirse en 2–3 segundos y verse brillante\n4. Agrega todas las tiras de pollo de una vez\n5. SIN revolver durante 2–3 min hasta que los bordes se vean dorados (café claro)\n6. Revuelve; cocina 3–4 min más moviendo constantemente\n7. Listo cuando: exterior dorado, interior blanco firme, no suelta líquido al presionar\n\nTiempo total: 9–11 min.',
         timer_segundos: 600
       },
       {
@@ -30,7 +30,7 @@ export const BATCH_COOKING = {
         timer_segundos: null
       },
       {
-        texto: 'PASO 7 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n495 g crudo rinden ~1,238 g cocidos. Divide en 8 porciones.\n\n🍳 Desayuno Lunes (Okayu): ~90 g cocido\n🍳 Desayuno Martes (Okayu): ~90 g cocido\n🍳 Desayuno Miércoles (Okayu): ~90 g cocido\n🍚 Lunes almuerzo (Teriyaki): 200 g cocido\n🍚 Martes almuerzo (Gyudon): 200 g cocido\n🍚 Miércoles almuerzo (Soboro): 200 g cocido\n🍚 Martes cena (Tofu Don): 188 g cocido\n🍚 Miércoles cena (Sopa Miso): 188 g cocido\n\nOpciones para guardar:\nA) Un contenedor grande — pesa al usar\nB) Contenedores etiquetados — más rápido en el día\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
+        texto: 'PASO 7 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n495 g crudo rinden ~1,238 g cocidos. Divide en 8 porciones.\n\n🍳 Desayuno Lunes (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Martes (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Miércoles (Arroz Miso Tamago): ~90 g cocido\n🍚 Lunes almuerzo (Teriyaki): 200 g cocido\n🍚 Martes almuerzo (Gyudon): 200 g cocido\n🍚 Miércoles almuerzo (Soboro): 200 g cocido\n🍚 Martes cena (Tofu Don): 188 g cocido\n🍚 Miércoles cena (Sopa Miso): 188 g cocido\n\nOpciones para guardar:\nA) Un contenedor grande — pesa al usar\nB) Contenedores etiquetados — más rápido en el día\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
         timer_segundos: null
       },
       {
@@ -58,7 +58,7 @@ export const BATCH_COOKING = {
     nota: 'Cubre Jueves · Viernes almuerzos + desayunos y cenas Jue/Vie/Sáb/Dom',
     tareas: [
       {
-        texto: 'PASO 1 — ENCIENDE LA ARROCERA (MIN 0)\n\n605 g de arroz blanco crudo + 726 ml de agua fría.\n\n1. Coloca 605 g de arroz en el recipiente de la arrocera\n2. Agrega 726 ml de agua fría\n3. Remueve y enciende\n4. Lista en ~20 min — cambiará sola a "Mantener caliente"\n\nMientras se cocina, continúa con los siguientes pasos.',
+        texto: 'PASO 1 — ENCIENDE LA ARROCERA (MIN 0)\n\n530 g de arroz blanco crudo + 636 ml de agua fría.\n(El domingo almuerzo es libre — ese arroz ya no va en el batch.)\n\n1. Coloca 530 g de arroz en el recipiente de la arrocera\n2. Agrega 636 ml de agua fría\n3. Remueve y enciende\n4. Lista en ~20 min — cambiará sola a "Mantener caliente"\n\nMientras se cocina, continúa con los siguientes pasos.',
         timer_segundos: null
       },
       {
@@ -70,7 +70,7 @@ export const BATCH_COOKING = {
         timer_segundos: null
       },
       {
-        texto: 'PASO 4 — COCINA EL POLLO (MIN 10–20)\n\n135 g de pollo crudo + 5 g de ghee → rinde ~108 g cocidos.\nTODO va al Jueves almuerzo.\n\n1. Sartén antiadherente grande a FUEGO MEDIO-ALTO (6–7 de 9)\n2. Espera 1 minuto; agrega los 5 g de ghee\n3. Agrega el pollo; SIN revolver 2–3 min hasta bordes dorados\n4. Revuelve; cocina 3–4 min más\n5. Listo: exterior dorado, interior blanco firme\n\nCorta en cubos de ~2 cm mientras está caliente.\n📦 Contenedor: "POLLO CUBOS (~108 g) — Jueves almuerzo"\nA la NEVERA inmediatamente.',
+        texto: 'PASO 4 — COCINA EL POLLO (MIN 10–20)\n\n135 g de pollo crudo + 5 g de ghee → rinde ~108 g cocidos.\nTODO va al Jueves almuerzo.\n\nTÉCNICA RENA WARE:\n1. Pon la sartén Rena Ware grande VACÍA Y SECA a FUEGO MEDIO-ALTO (6–7 de 9)\n2. Espera 2–3 minutos. PRUEBA DE AGUA: gotas que bailan y se evaporan en segundos = lista\n3. Agrega los 5 g de ghee — debe derretirse en 2–3 segundos\n4. Agrega el pollo; SIN revolver 2–3 min hasta bordes dorados (café claro)\n5. Revuelve; cocina 3–4 min más\n6. Listo: exterior dorado, interior blanco firme\n\nCorta en cubos de ~2 cm mientras está caliente.\n📦 Contenedor: "POLLO CUBOS (~108 g) — Jueves almuerzo"\nA la NEVERA inmediatamente.',
         timer_segundos: 600
       },
       {
@@ -78,22 +78,22 @@ export const BATCH_COOKING = {
         timer_segundos: null
       },
       {
-        texto: 'PASO 6 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n605 g crudo rinden ~1,513 g cocidos. Divide en 10 porciones.\n\n🍳 Desayuno Jueves (Okayu): ~90 g cocido\n🍳 Desayuno Viernes (Okayu): ~90 g cocido\n🍳 Desayuno Sábado (Okayu): ~90 g cocido\n🍳 Desayuno Domingo (Okayu): ~90 g cocido\n🍚 Jueves almuerzo (Teriyaki): 200 g cocido\n🍚 Viernes almuerzo (Gyudon): 200 g cocido\n🍚 Domingo almuerzo (Tamagoyaki): 200 g cocido\n🍚 Viernes cena (Tofu Don): 188 g cocido\n🍚 Sábado cena (Sopa Miso): 188 g cocido\n🍚 Domingo cena (Sopa Miso): 188 g cocido\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
+        texto: 'PASO 6 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n530 g crudo rinden ~1,325 g cocidos. Divide en 9 porciones.\n⚠️ El almuerzo del DOMINGO es libre (comes por fuera) — no hay arroz para ese almuerzo.\n\n🍳 Desayuno Jueves (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Viernes (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Sábado (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Domingo (Arroz Miso Tamago): ~90 g cocido\n🍚 Jueves almuerzo (Teriyaki): 200 g cocido\n🍚 Viernes almuerzo (Gyudon): 200 g cocido\n🍚 Viernes cena (Tofu Don): 188 g cocido\n🍚 Sábado cena (Sopa Miso): 188 g cocido\n🍚 Domingo cena (Sopa Miso): 188 g cocido\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
         timer_segundos: null
       },
       {
-        texto: 'PASO 7 — ABRE EL TOFU (MIN 22)\n\n520 g de Tofu Mori-Nu Silken en total (usa los paquetes restantes de la semana):\n  • 80 g → Jueves cena (Miso Udon)\n  • 200 g → Viernes cena (Tofu Don)\n  • 120 g → Sábado cena (Tofu Tamago)\n  • 120 g → Domingo cena (Tofu Tamago)\n\n⚠️ Tofu Silken es delicado — ábrelo con cuidado.\nGuarda en contenedor de VIDRIO hermético, etiquetado. A la NEVERA.',
+        texto: 'PASO 7 — ABRE EL TOFU (MIN 22)\n\n520 g de Tofu Mori-Nu Silken en total:\n  • 80 g → Jueves cena (Miso Udon)\n  • 200 g → Viernes cena (Tofu Don)\n  • 120 g → Sábado cena (Sopa Miso)\n  • 120 g → Domingo cena (Sopa Miso)\n\n⚠️ Ya tienes 220 g de tofu en la nevera del batch del domingo. Revisa antes de abrir más. Solo necesitas abrir 1 paquete adicional (~300 g) para completar los 520 g.\n\n⚠️ Tofu Silken es delicado — ábrelo con cuidado.\nGuarda en contenedor de VIDRIO hermético, etiquetado. A la NEVERA.',
         timer_segundos: null
       },
       {
-        texto: 'CHECKLIST FINAL (MIN 30–35)\n\nVerifica que TODO está en NEVERA, etiquetado:\n\n☐ POLLO CUBOS (~108 g cocido) — Jueves almuerzo\n☐ RES MARINADA (110 g crudo) — Viernes almuerzo (NO va al congelador)\n☐ ARROZ (~1,513 g cocido) — Desayunos Jue/Vie/Sáb/Dom (90g c/u) + almuerzos Jue/Vie/Dom (200g c/u) + cenas Vie/Sáb/Dom (188g c/u)\n☐ TOFU (520 g en vidrio) — Jue/Vie/Sáb/Dom cenas\n\n✅ Listo. Jueves y Viernes + desayunos y cenas hasta el Domingo preparados.',
+        texto: 'CHECKLIST FINAL (MIN 30–35)\n\nVerifica que TODO está en NEVERA, etiquetado:\n\n☐ POLLO CUBOS (~108 g cocido) — Jueves almuerzo\n☐ RES MARINADA (110 g crudo) — Viernes almuerzo (NO va al congelador)\n☐ ARROZ (~1,325 g cocido) — Desayunos Jue/Vie/Sáb/Dom (90g c/u) + almuerzos Jue/Vie (200g c/u) + cenas Vie/Sáb/Dom (188g c/u)\n   ⚠️ Dom almuerzo es libre — no preparaste arroz para ese.\n☐ TOFU (520 g en vidrio, incluye 220 g del batch Dom) — Jue/Vie/Sáb/Dom cenas\n\n✅ Listo. Jueves y Viernes + desayunos y cenas hasta el Domingo preparados.',
         timer_segundos: null
       }
     ],
     almacenamiento: [
       '📦 NEVERA — POLLO CUBOS (~108 g cocido): 3 días → Jueves almuerzo (Teriyaki)',
       '❄️  NEVERA, NO CONGELADOR — RES MARINADA (110 g crudo): máximo 2 días → Viernes almuerzo (Gyudon)',
-      '📦 NEVERA — ARROZ (605 g crudo → ~1,513 g cocido): hasta 5 días → Desayunos 4×90g + Jue 200g + Vie 200g + Dom 200g (almuerzo) y Vie 188g + Sáb 188g + Dom 188g (cena)',
+      '📦 NEVERA — ARROZ (530 g crudo → ~1,325 g cocido): hasta 5 días → Desayunos 4×90g + Jue 200g + Vie 200g (almuerzo) y Vie 188g + Sáb 188g + Dom 188g (cena). Dom almuerzo = libre.',
       '📦 NEVERA VIDRIO — TOFU (520 g): hasta 4 días → Jue cena 80g · Vie cena 200g · Sáb cena 120g · Dom cena 120g'
     ]
   },
