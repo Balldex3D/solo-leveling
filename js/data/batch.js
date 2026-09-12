@@ -6,7 +6,7 @@ export const BATCH_COOKING = {
     nota: 'Cubre Lunes · Martes · Miércoles — desayunos, almuerzos y cenas',
     tareas: [
       {
-        texto: 'PASO 1 — ENCIENDE LA ARROCERA (MIN 0)\n\n495 g de arroz blanco crudo + 594 ml de agua fría.\n\n1. Coloca 495 g de arroz en el recipiente de la arrocera\n2. Agrega 594 ml de agua fría\n3. Remueve y enciende\n4. Lista en ~20 min — cambiará sola a "Mantener caliente"\n\nMientras se cocina, continúa con los siguientes pasos.',
+        texto: 'PASO 1 — ENCIENDE LA ARROCERA (MIN 0)\n\n498 g de arroz blanco crudo + 598 ml de agua fría.\n\n1. Coloca 498 g de arroz en el recipiente de la arrocera\n2. Agrega 598 ml de agua fría\n3. Remueve y enciende\n4. Lista en ~20 min — cambiará sola a "Mantener caliente"\n\nMientras se cocina, continúa con los siguientes pasos.',
         timer_segundos: null
       },
       {
@@ -30,7 +30,7 @@ export const BATCH_COOKING = {
         timer_segundos: null
       },
       {
-        texto: 'PASO 7 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n495 g crudo rinden ~1,238 g cocidos. Divide en 8 porciones.\n\n🍳 Desayuno Lunes (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Martes (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Miércoles (Arroz Miso Tamago): ~90 g cocido\n🍚 Lunes almuerzo (Teriyaki): 200 g cocido\n🍚 Martes almuerzo (Gyudon): 200 g cocido\n🍚 Miércoles almuerzo (Soboro): 200 g cocido\n🍚 Martes cena (Tofu Don): 188 g cocido\n🍚 Miércoles cena (Sopa Miso): 188 g cocido\n\nOpciones para guardar:\nA) Un contenedor grande — pesa al usar\nB) Contenedores etiquetados — más rápido en el día\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
+        texto: 'PASO 7 — DIVIDE Y GUARDA EL ARROZ (MIN 20, CUANDO ARROCERA AVISA)\n\n498 g crudo rinden ~1,245 g cocidos. Divide en 8 porciones.\n\n🍳 Desayuno Lunes (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Martes (Arroz Miso Tamago): ~90 g cocido\n🍳 Desayuno Miércoles (Arroz Miso Tamago): ~90 g cocido\n🍚 Lunes almuerzo (Teriyaki): 200 g cocido\n🍚 Martes almuerzo (Gyudon): 200 g cocido\n🍚 Miércoles almuerzo (Soboro): 200 g cocido\n🍚 Martes cena (Tofu Don): 188 g cocido\n🍚 Miércoles cena (Sopa Miso): 188 g cocido\n\nOpciones para guardar:\nA) Un contenedor grande — pesa al usar\nB) Contenedores etiquetados — más rápido en el día\n\nEspera 2 min a que enfríe un poco antes de tapar. A la NEVERA.',
         timer_segundos: null
       },
       {
@@ -38,7 +38,7 @@ export const BATCH_COOKING = {
         timer_segundos: null
       },
       {
-        texto: 'CHECKLIST FINAL (MIN 40–45)\n\nVerifica que TODO está en NEVERA, etiquetado:\n\n☐ POLLO CUBOS (~108 g) — Lunes almuerzo\n☐ POLLO DESHILACHADO (~48 g) — Miércoles almuerzo\n☐ RES MARINADA (110 g crudo) — Martes almuerzo (NO va al congelador)\n☐ ARROZ (~1,238 g cocido) — Desayunos Lun/Mar/Mié (90g c/u) + almuerzos Lun/Mar/Mié (200g c/u) + cenas Mar/Mié (188g c/u)\n☐ TOFU (400 g en vidrio) — Lun/Mar/Mié cenas\n\n✅ Listo. Lunes, Martes y Miércoles están preparados.',
+        texto: 'CHECKLIST FINAL (MIN 40–45)\n\nVerifica que TODO está en NEVERA, etiquetado:\n\n☐ POLLO CUBOS (~108 g) — Lunes almuerzo\n☐ POLLO DESHILACHADO (~48 g) — Miércoles almuerzo\n☐ RES MARINADA (110 g crudo) — Martes almuerzo (NO va al congelador)\n☐ ARROZ (~1,245 g cocido) — Desayunos Lun/Mar/Mié (90g c/u) + almuerzos Lun/Mar/Mié (200g c/u) + cenas Mar/Mié (188g c/u)\n☐ TOFU (400 g en vidrio) — Lun/Mar/Mié cenas\n\n✅ Listo. Lunes, Martes y Miércoles están preparados.',
         timer_segundos: null
       }
     ],
@@ -46,7 +46,7 @@ export const BATCH_COOKING = {
       '📦 NEVERA — POLLO CUBOS (~108 g cocido): 3 días → Lunes almuerzo (Teriyaki)',
       '📦 NEVERA — POLLO DESHILACHADO (~48 g cocido): 3 días → Miércoles almuerzo (Soboro)',
       '❄️  NEVERA, NO CONGELADOR — RES MARINADA (110 g crudo): máximo 2 días → Martes almuerzo (Gyudon)',
-      '📦 NEVERA — ARROZ (495 g crudo → ~1,238 g cocido): 3 días → Desayunos 3×90g + Lun 200g + Mar 200g + Mié 200g (almuerzo) y Mar 188g + Mié 188g (cena)',
+      '📦 NEVERA — ARROZ (498 g crudo → ~1,245 g cocido): 3 días → Desayunos 3×90g + Lun 200g + Mar 200g + Mié 200g (almuerzo) y Mar 188g + Mié 188g (cena)',
       '📦 NEVERA VIDRIO — TOFU (400 g): 3 días → Lun cena 80g · Mar cena 200g · Mié cena 120g'
     ]
   },
