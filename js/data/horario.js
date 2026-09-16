@@ -11,19 +11,19 @@ export const HORARIO = {
   almuerzo: '13:30',
   cena: '19:00',
 
-  // Batch cooking: domingo y miercoles
-  batch_cooking_dias: ['domingo', 'miercoles'],
-  batch_cooking_hora_default: '20:00'
+  // Prep diario: todos los días mañana; solo lunes y jueves noche
+  prep_diario_hora_manana: '08:45',
+  prep_diario_hora_noche: '20:00'
 };
 
 export const RUTINA_SEMANAL = {
-  lunes: { nombre: 'Lunes', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo' },
+  lunes: { nombre: 'Lunes', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo', prep_noche: true },
   martes: { nombre: 'Martes', entrenamiento: 'Pierna', almuerzo: 'gyudon', cena: 'tofu_don_espinaca' },
-  miercoles: { nombre: 'Miercoles', entrenamiento: 'Recuperacion activa', almuerzo: 'egg_soboro_don', cena: 'sopa_miso_arroz_tofu', batch_cooking: true },
-  jueves: { nombre: 'Jueves', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo' },
+  miercoles: { nombre: 'Miercoles', entrenamiento: 'Recuperacion activa', almuerzo: 'egg_soboro_don', cena: 'sopa_miso_arroz_tofu' },
+  jueves: { nombre: 'Jueves', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo', prep_noche: true },
   viernes: { nombre: 'Viernes', entrenamiento: 'Pierna', almuerzo: 'gyudon', cena: 'tofu_don_espinaca' },
   sabado: { nombre: 'Sabado', entrenamiento: 'Descanso', almuerzo: 'salmon_don', cena: 'sopa_miso_arroz_tofu' },
-  domingo: { nombre: 'Domingo', entrenamiento: 'Descanso', almuerzo: 'tamagoyaki_don', cena: 'sopa_miso_arroz_tofu', batch_cooking: true }
+  domingo: { nombre: 'Domingo', entrenamiento: 'Descanso', almuerzo: null, cena: 'sopa_miso_arroz_tofu' }
 };
 
 export const getDiaDelMes = () => {

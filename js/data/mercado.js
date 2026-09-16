@@ -21,8 +21,8 @@ export const MERCADO = {
     {
       id: 'huevos',
       producto: 'Huevos',
-      cantidad: '24 unidades',
-      nota: 'Desayuno okayu ×7 (1 c/u) · Mar almuerzo Gyudon 1 · Mié almuerzo Soboro 3 · Dom almuerzo Tamagoyaki 3 · Lun cena Miso Udon 2 · Mar cena Tofu Don 1 · Mié cena Sopa Miso 1 · Jue cena Miso Udon 2 · Vie almuerzo Gyudon 1 · Vie cena Tofu Don 1 · Sáb cena Sopa Miso 1 · Dom cena Sopa Miso 1 = 24 ud. El batido NO lleva huevo.'
+      cantidad: '21 unidades',
+      nota: 'Desayuno okayu ×7 (1 c/u) = 7 · Mar almuerzo Gyudon 1 · Mié almuerzo Soboro 3 · Lun cena Miso Udon 2 · Mar cena Tofu Don 1 · Mié cena Sopa Miso 1 · Jue cena Miso Udon 2 · Vie almuerzo Gyudon 1 · Vie cena Tofu Don 1 · Sáb cena Sopa Miso 1 · Dom cena Sopa Miso 1 = 21 ud. El batido NO lleva huevo. Domingo almuerzo es LIBRE.'
     },
     {
       id: 'tofu',
@@ -61,7 +61,7 @@ export const MERCADO = {
       id: 'arroz',
       producto: 'Arroz blanco',
       cantidad: '5 kg',
-      nota: '~1,185 g/semana: batch domingo 495 g + batch miércoles 605 g + sábado almuerzo fresco 85 g.'
+      nota: '~1,105 g/semana: desayunos 7×35 g=245 g · almuerzos 6×80 g + 1×85 g (sáb)=565 g · cenas 5×75 g=375 g (lun/jue no llevan arroz en cena). Domingo almuerzo = LIBRE.'
     },
     {
       id: 'udon',
@@ -85,7 +85,7 @@ export const MERCADO = {
       id: 'mirin',
       producto: 'Mirin',
       cantidad: '375 ml',
-      nota: '~50 ml/semana: marinadas (2.5 ml × 2 batch) + recetas Teriyaki × 2 (10 ml c/u) + Gyudon × 2 (10 ml c/u) + Soboro (10 ml) + Tamagoyaki (5 ml).'
+      nota: '~55 ml/semana: marinadas (2.5 ml × 2) = 5 ml · Teriyaki ×2 (10 ml c/u) = 20 ml · Gyudon ×2 (10 ml c/u) = 20 ml · Soboro (10 ml) = 10 ml. Total: 55 ml.'
     },
     {
       id: 'sesamo_oil',
@@ -97,7 +97,7 @@ export const MERCADO = {
       id: 'sesamo_semillas',
       producto: 'Sésamo semillas',
       cantidad: '200 g',
-      nota: '~45 g/semana: 5 g de topping en okayu ×7, Teriyaki ×2, Gyudon ×2, Soboro, Salmon Don, Tofu Don ×2, Tamagoyaki.'
+      nota: '~40 g/semana: 5 g de topping en Teriyaki ×2, Gyudon ×2, Soboro, Salmon Don, Tofu Don ×2, Tamagoyaki = 40 g. (Okayu no lleva sésamo.)'
     },
     {
       id: 'nori',
@@ -109,7 +109,7 @@ export const MERCADO = {
       id: 'ghee',
       producto: 'Ghee clarificado',
       cantidad: '250 g',
-      nota: '~60 g/semana: batch domingo pollo 10 g + batch miércoles pollo 5 g + Teriyaki ×2 (7 g) + Gyudon ×2 (5 g) + Tofu Don ×2 (10 g) + Tamagoyaki (5 g).'
+      nota: '~105 g/semana: cocción diaria pollo/proteína Lun+Jue (7 g c/u) = 14 g · Teriyaki ×2 (7 g) = 14 g · Gyudon ×2 (5 g) = 10 g · Tofu Don ×2 (10 g) = 20 g · Tamagoyaki (5 g) = 5 g · pizca huevos okayu/soboro/udon/sopa (~42 g) = 42 g. Total: 105 g.'
     },
     {
       id: 'aceite_oliva',
@@ -134,6 +134,12 @@ export const MERCADO = {
       producto: 'Almidón de maíz (maicena)',
       cantidad: '250 g',
       nota: '16 g/semana: 8 g por receta × 2 (Tofu Don, Martes y Viernes cena).'
+    },
+    {
+      id: 'sal_pimienta',
+      producto: 'Sal + pimienta negra molida',
+      cantidad: '1 frasco pequeño',
+      nota: 'Ingredientes básicos (pantry). Solo se usan pizca en Salmon Don (sábado almuerzo).'
     },
     {
       id: 'whey',

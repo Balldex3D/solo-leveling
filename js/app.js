@@ -8,7 +8,7 @@ import { fechaStr } from './core/fecha.js';
 import { RECETAS, pasosNormalizados } from './data/recetas.js';
 import { HORARIO, RUTINA_SEMANAL, getDiaDelMes, getRutinaDia } from './data/horario.js';
 import { MERCADO } from './data/mercado.js';
-import { BATCH_COOKING, getBatchCooking, getBatchCookingList } from './data/batch.js';
+import { PREP_DIARIO, getPrepDiario, getPrepDiarioList } from './data/batch.js';
 import { RUTINA_DIARIA } from './data/rutina.js';
 import { getFaseActiva } from './data/fases.js';
 import { macrosDeReceta, totalesDelDia, progresoVsMeta, autoVerificar } from './core/macros.js';
@@ -237,11 +237,15 @@ function renderizarDashboard() {
     { id: 'batido', nombre: 'Batido post-entreno', tipo: 'batido', receta: 'batido_post_entreno' },
   ];
 
-  quests.push({ id: 'almuerzo', nombre: `Almuerzo — ${rutina.almuerzo}`, tipo: 'almuerzo', receta: rutina.almuerzo });
+  if (rutina.almuerzo) {
+    quests.push({ id: 'almuerzo', nombre: `Almuerzo — ${rutina.almuerzo}`, tipo: 'almuerzo', receta: rutina.almuerzo });
+  } else {
+    quests.push({ id: 'almuerzo_libre', nombre: 'Almuerzo libre — comes por fuera', tipo: 'almuerzo_libre', receta: null });
+  }
   quests.push({ id: 'cena', nombre: `Cena — ${rutina.cena}`, tipo: 'cena', receta: rutina.cena });
 
-  if (rutina.batch_cooking) {
-    quests.push({ id: 'batch', nombre: 'Batch cooking', tipo: 'batch_cooking', receta: null });
+  if (rutina.prep_noche) {
+    quests.push({ id: 'prep_noche', nombre: 'Prep de noche — Marinada res para mañana', tipo: 'prep_noche', receta: null });
   }
 
   quests.forEach(quest => {
@@ -434,48 +438,37 @@ function renderizarPaso() {
   }
 }
 
-// ============ BATCH ============
+// ============ BATCH / PREP DIARIO ============
 
 function renderizarBatch() {
   const container = document.getElementById('batch-content');
   const diaDelMes = getDiaDelMes();
-  const tareas = [];
+  const prep = getPrepDiario(diaDelMes);
 
-  if (diaDelMes === 'domingo') tareas.push(getBatchCooking('domingo_noche'));
-  if (diaDelMes === 'miercoles') tareas.push(getBatchCooking('miercoles_noche'));
-  if (tareas.length === 0) tareas.push(...getBatchCookingList());
+  if (!prep) {
+    container.innerHTML = `<div class="panel"><p class="text-secondary">No hay prep registrado para ${diaDelMes}.</p></div>`;
+    return;
+  }
 
-  let html = '';
-  tareas.forEach(batch => {
-    html += `
-      <div class="panel">
-        <h3>${batch.titulo}</h3>
-        ${batch.tiempo_min ? `<p class="text-secondary">⏱ ${batch.tiempo_min} min</p>` : ''}
-        ${batch.nota ? `<p class="text-secondary"><em>${batch.nota}</em></p>` : ''}
-    `;
+  let html = `
+    <div class="panel">
+      <h3>${prep.titulo}</h3>
+      ${prep.tiempo_min ? `<p class="text-secondary">⏱ ${prep.tiempo_min} min</p>` : ''}
+      ${prep.nota ? `<p class="text-secondary"><em>${prep.nota}</em></p>` : ''}
+  `;
 
-    // Mostrar ORDEN SUGERIDO si existe
-    if (batch.orden_sugerido) {
-      html += `
-        <div style="margin-top:var(--space-md);padding:var(--space-md);background:linear-gradient(180deg,rgba(65,240,166,.08),rgba(65,240,166,.02));border-left:4px solid var(--clr-verde);border-radius:2px;">
-          <strong style="color:var(--clr-verde);text-shadow:0 0 8px rgba(65,240,166,.4);">📋 ORDEN SUGERIDO</strong>
-          <pre style="font-size:12px;color:var(--clr-text-secondary);line-height:1.5;white-space:pre-wrap;word-wrap:break-word;margin:var(--space-sm) 0 0;font-family:var(--font-system);">${batch.orden_sugerido}</pre>
-        </div>
-      `;
-    }
-
-    // Pasos numerados con mejor presentación
+  // SECCIÓN MAÑANA
+  if (prep.tareas_manana && prep.tareas_manana.length > 0) {
     html += `
       <div style="margin-top:var(--space-lg);">
-        <strong style="color:var(--clr-cian);text-shadow:0 0 8px rgba(62,197,255,.5);">PASO A PASO</strong>
+        <strong style="color:var(--clr-verde);text-shadow:0 0 8px rgba(65,240,166,.5);">🌅 MAÑANA (AL LEVANTARSE)</strong>
         <div style="margin-top:var(--space-md);">
-          ${batch.tareas.map((tarea, i) => {
-            // Divide el texto por saltos de línea y crea sub-puntos
+          ${prep.tareas_manana.map((tarea, i) => {
             const lineas = (tarea.texto || tarea).split('\n').filter(l => l.trim());
-            const titulo = lineas[0]; // Primera línea es el título
-            const detalles = lineas.slice(1); // Resto son detalles
+            const titulo = lineas[0];
+            const detalles = lineas.slice(1);
             return `
-              <div style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid var(--clr-blue);">
+              <div style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid var(--clr-verde);">
                 <strong style="font-size:14px;color:#fff;">${i + 1}. ${titulo}</strong>
                 ${detalles.length > 0 ? `
                   <div style="margin-top:var(--space-sm);font-size:13px;line-height:1.6;color:var(--clr-text-primary);">
@@ -489,22 +482,48 @@ function renderizarBatch() {
         </div>
       </div>
     `;
+  }
 
-    // Almacenamiento: lista visual sin checkboxes (sin persistencia nueva)
-    if (batch.almacenamiento) {
-      html += `
-        <div style="margin-top:var(--space-lg);padding:var(--space-md);background:var(--clr-darker);border-left:4px solid var(--clr-cian);border-radius:2px;">
-          <strong style="color:var(--clr-cian);text-shadow:0 0 8px rgba(62,197,255,.5);">📦 Almacenamiento</strong>
-          <ul style="margin:var(--space-sm) 0;padding-left:24px;font-size:13px;line-height:1.7;color:var(--clr-text-primary);">
-            ${batch.almacenamiento.map(item => `<li style="margin:4px 0;">${item}</li>`).join('')}
-          </ul>
+  // SECCIÓN NOCHE (si existe)
+  if (prep.tareas_noche && prep.tareas_noche.length > 0) {
+    html += `
+      <div style="margin-top:var(--space-lg);">
+        <strong style="color:var(--clr-ambar);text-shadow:0 0 8px rgba(255,207,92,.5);">🌙 ESTA NOCHE (MARINADA PARA MAÑANA)</strong>
+        <div style="margin-top:var(--space-md);">
+          ${prep.tareas_noche.map((tarea, i) => {
+            const lineas = (tarea.texto || tarea).split('\n').filter(l => l.trim());
+            const titulo = lineas[0];
+            const detalles = lineas.slice(1);
+            return `
+              <div style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid var(--clr-ambar);">
+                <strong style="font-size:14px;color:#fff;">${i + 1}. ${titulo}</strong>
+                ${detalles.length > 0 ? `
+                  <div style="margin-top:var(--space-sm);font-size:13px;line-height:1.6;color:var(--clr-text-primary);">
+                    ${detalles.map(linea => `<div style="margin:4px 0;">${linea}</div>`).join('')}
+                  </div>
+                ` : ''}
+                ${tarea.timer_segundos ? `<div class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);display:flex;align-items:center;gap:4px;">⏱ Tiempo: ${Math.floor(tarea.timer_segundos / 60)}:${(tarea.timer_segundos % 60).toString().padStart(2, '0')} min</div>` : ''}
+              </div>
+            `;
+          }).join('')}
         </div>
-      `;
-    }
+      </div>
+    `;
+  }
 
-    html += `</div>`;
-  });
+  // ALMACENAMIENTO
+  if (prep.almacenamiento) {
+    html += `
+      <div style="margin-top:var(--space-lg);padding:var(--space-md);background:var(--clr-darker);border-left:4px solid var(--clr-cian);border-radius:2px;">
+        <strong style="color:var(--clr-cian);text-shadow:0 0 8px rgba(62,197,255,.5);">📦 Almacenamiento</strong>
+        <ul style="margin:var(--space-sm) 0;padding-left:24px;font-size:13px;line-height:1.7;color:var(--clr-text-primary);">
+          ${prep.almacenamiento.map(item => `<li style="margin:4px 0;">${item}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }
 
+  html += `</div>`;
   container.innerHTML = html;
 }
 
