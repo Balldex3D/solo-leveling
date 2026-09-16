@@ -444,40 +444,56 @@ function renderizarBatch() {
   const container = document.getElementById('batch-content');
   const diaDelMes = getDiaDelMes();
 
-  // Domingo: mostrar batch congelables semanal
-  let itemAMostrar = null;
-  if (diaDelMes === 'domingo') {
-    itemAMostrar = getBatchCongelables();
-  } else {
-    itemAMostrar = getPrepDiario(diaDelMes);
+  let html = '';
+
+  // SIEMPRE mostrar batch congelables (domingo noche)
+  const batchCongelables = getBatchCongelables();
+  if (batchCongelables) {
+    html += renderizarItemBatch(batchCongelables);
   }
 
-  if (!itemAMostrar) {
-    container.innerHTML = `<div class="panel"><p class="text-secondary">No hay prep registrado para ${diaDelMes}.</p></div>`;
+  // Luego mostrar prep diario del día actual
+  const prepDiario = getPrepDiario(diaDelMes);
+  if (prepDiario) {
+    html += renderizarItemBatch(prepDiario);
+  }
+
+  if (!html) {
+    container.innerHTML = `<div class="panel"><p class="text-secondary">No hay prep registrado.</p></div>`;
     return;
   }
 
-  const prep = itemAMostrar;
+  container.innerHTML = html;
+}
+
+function renderizarItemBatch(prep) {
+  if (!prep) return '';
 
   let html = `
-    <div class="panel">
+    <div class="panel" style="margin-bottom:var(--space-lg);">
       <h3>${prep.titulo}</h3>
       ${prep.tiempo_min ? `<p class="text-secondary">⏱ ${prep.tiempo_min} min</p>` : ''}
       ${prep.nota ? `<p class="text-secondary"><em>${prep.nota}</em></p>` : ''}
   `;
 
-  // SECCIÓN MAÑANA
-  if (prep.tareas_manana && prep.tareas_manana.length > 0) {
+  // SECCIÓN TAREAS (batch congelables) o MAÑANA (prep diario)
+  const tareas = prep.tareas || prep.tareas_manana;
+  const esNoche = prep.dia === 'domingo_noche';
+  if (tareas && tareas.length > 0) {
+    const titulo = esNoche ? '🌙 BATCH CONGELABLES (DOMINGO NOCHE)' : '🌅 MAÑANA (AL LEVANTARSE)';
+    const color = esNoche ? 'var(--clr-ambar)' : 'var(--clr-verde)';
+    const sombra = esNoche ? 'rgba(255,207,92,.5)' : 'rgba(65,240,166,.5)';
+    const borde = esNoche ? 'var(--clr-ambar)' : 'var(--clr-verde)';
     html += `
       <div style="margin-top:var(--space-lg);">
-        <strong style="color:var(--clr-verde);text-shadow:0 0 8px rgba(65,240,166,.5);">🌅 MAÑANA (AL LEVANTARSE)</strong>
+        <strong style="color:${color};text-shadow:0 0 8px ${sombra};">${titulo}</strong>
         <div style="margin-top:var(--space-md);">
-          ${prep.tareas_manana.map((tarea, i) => {
+          ${tareas.map((tarea, i) => {
             const lineas = (tarea.texto || tarea).split('\n').filter(l => l.trim());
             const titulo = lineas[0];
             const detalles = lineas.slice(1);
             return `
-              <div style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid var(--clr-verde);">
+              <div style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid ${borde};">
                 <strong style="font-size:14px;color:#fff;">${i + 1}. ${titulo}</strong>
                 ${detalles.length > 0 ? `
                   <div style="margin-top:var(--space-sm);font-size:13px;line-height:1.6;color:var(--clr-text-primary);">
@@ -497,7 +513,7 @@ function renderizarBatch() {
   if (prep.tareas_noche && prep.tareas_noche.length > 0) {
     html += `
       <div style="margin-top:var(--space-lg);">
-        <strong style="color:var(--clr-ambar);text-shadow:0 0 8px rgba(255,207,92,.5);">🌙 ESTA NOCHE (MARINADA PARA MAÑANA)</strong>
+        <strong style="color:var(--clr-ambar);text-shadow:0 0 8px rgba(255,207,92,.5);">🌙 ESTA NOCHE</strong>
         <div style="margin-top:var(--space-md);">
           ${prep.tareas_noche.map((tarea, i) => {
             const lineas = (tarea.texto || tarea).split('\n').filter(l => l.trim());
@@ -533,7 +549,7 @@ function renderizarBatch() {
   }
 
   html += `</div>`;
-  container.innerHTML = html;
+  return html;
 }
 
 // ============ MERCADO ============
