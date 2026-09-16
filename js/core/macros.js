@@ -54,6 +54,7 @@ export function totalesDelDia(fecha, ajusteFase1 = false) {
   totales.carbo += batido.carbo;
 
   // Almuerzo (puede ser null si es día libre como domingo)
+  let esVerificable = true;
   if (rutina.almuerzo) {
     const almuerzo = macrosDeReceta(rutina.almuerzo, ajusteFase1);
     totales.kcal += almuerzo.kcal;
@@ -61,7 +62,7 @@ export function totalesDelDia(fecha, ajusteFase1 = false) {
     totales.grasa += almuerzo.grasa;
     totales.carbo += almuerzo.carbo;
   } else {
-    totales.verificable = false; // Día con almuerzo libre no es verificable
+    esVerificable = false; // Día con almuerzo libre no es verificable
   }
 
   // Cena
@@ -71,7 +72,7 @@ export function totalesDelDia(fecha, ajusteFase1 = false) {
   totales.grasa += cena.grasa;
   totales.carbo += cena.carbo;
 
-  totales.verificable = true;
+  totales.verificable = esVerificable;
   return totales;
 }
 

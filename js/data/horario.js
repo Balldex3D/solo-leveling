@@ -17,10 +17,10 @@ export const HORARIO = {
 };
 
 export const RUTINA_SEMANAL = {
-  lunes: { nombre: 'Lunes', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo', prep_noche: true },
+  lunes: { nombre: 'Lunes', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo' },
   martes: { nombre: 'Martes', entrenamiento: 'Pierna', almuerzo: 'gyudon', cena: 'tofu_don_espinaca' },
   miercoles: { nombre: 'Miercoles', entrenamiento: 'Recuperacion activa', almuerzo: 'egg_soboro_don', cena: 'sopa_miso_arroz_tofu' },
-  jueves: { nombre: 'Jueves', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo', prep_noche: true },
+  jueves: { nombre: 'Jueves', entrenamiento: 'Torso/Core', almuerzo: 'chicken_teriyaki_don', cena: 'miso_udon_huevo' },
   viernes: { nombre: 'Viernes', entrenamiento: 'Pierna', almuerzo: 'gyudon', cena: 'tofu_don_espinaca' },
   sabado: { nombre: 'Sabado', entrenamiento: 'Descanso', almuerzo: 'salmon_don', cena: 'sopa_miso_arroz_tofu' },
   domingo: { nombre: 'Domingo', entrenamiento: 'Descanso', almuerzo: null, cena: 'sopa_miso_arroz_tofu' }

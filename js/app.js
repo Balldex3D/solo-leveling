@@ -8,7 +8,7 @@ import { fechaStr } from './core/fecha.js';
 import { RECETAS, pasosNormalizados } from './data/recetas.js';
 import { HORARIO, RUTINA_SEMANAL, getDiaDelMes, getRutinaDia } from './data/horario.js';
 import { MERCADO } from './data/mercado.js';
-import { PREP_DIARIO, getPrepDiario, getPrepDiarioList } from './data/batch.js';
+import { BATCH_CONGELABLES, PREP_DIARIO, getBatchCongelables, getPrepDiario, getPrepDiarioList } from './data/batch.js';
 import { RUTINA_DIARIA } from './data/rutina.js';
 import { getFaseActiva } from './data/fases.js';
 import { macrosDeReceta, totalesDelDia, progresoVsMeta, autoVerificar } from './core/macros.js';
@@ -443,12 +443,21 @@ function renderizarPaso() {
 function renderizarBatch() {
   const container = document.getElementById('batch-content');
   const diaDelMes = getDiaDelMes();
-  const prep = getPrepDiario(diaDelMes);
 
-  if (!prep) {
+  // Domingo: mostrar batch congelables semanal
+  let itemAMostrar = null;
+  if (diaDelMes === 'domingo') {
+    itemAMostrar = getBatchCongelables();
+  } else {
+    itemAMostrar = getPrepDiario(diaDelMes);
+  }
+
+  if (!itemAMostrar) {
     container.innerHTML = `<div class="panel"><p class="text-secondary">No hay prep registrado para ${diaDelMes}.</p></div>`;
     return;
   }
+
+  const prep = itemAMostrar;
 
   let html = `
     <div class="panel">

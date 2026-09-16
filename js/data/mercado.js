@@ -4,13 +4,13 @@ export const MERCADO = {
       id: 'pollo',
       producto: 'Pechuga de pollo',
       cantidad: '330 g',
-      nota: 'Batch domingo: 195 g (135 g Lunes + 60 g Miércoles crudo). Batch miércoles: 135 g (Jueves). Total crudo: 330 g.'
+      nota: 'Batch domingo noche (congelables): 330 g crudo total. Lun 135 g cubos (Teriyaki, congelado) + Mié 48 g deshilachado (Soboro, congelado) + Jue 135 g cubos (Teriyaki, congelado). TODO a congelador.'
     },
     {
       id: 'res',
       producto: 'Res lomo/bola',
       cantidad: '220 g',
-      nota: 'Batch domingo: 110 g crudo → marinada Martes Gyudon. Batch miércoles: 110 g crudo → marinada Viernes Gyudon. Total: 220 g.'
+      nota: 'Batch domingo noche (congelables): 220 g crudo total dividido en 2 marinadas. Mar 110 g marinada Gyudon (congelado) + Vie 110 g marinada Gyudon (congelado). TODO a congelador.'
     },
     {
       id: 'salmon',
