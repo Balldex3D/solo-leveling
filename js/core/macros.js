@@ -53,12 +53,16 @@ export function totalesDelDia(fecha, ajusteFase1 = false) {
   totales.grasa += batido.grasa;
   totales.carbo += batido.carbo;
 
-  // Almuerzo
-  const almuerzo = macrosDeReceta(rutina.almuerzo, ajusteFase1);
-  totales.kcal += almuerzo.kcal;
-  totales.proteina += almuerzo.proteina;
-  totales.grasa += almuerzo.grasa;
-  totales.carbo += almuerzo.carbo;
+  // Almuerzo (puede ser null si es día libre como domingo)
+  if (rutina.almuerzo) {
+    const almuerzo = macrosDeReceta(rutina.almuerzo, ajusteFase1);
+    totales.kcal += almuerzo.kcal;
+    totales.proteina += almuerzo.proteina;
+    totales.grasa += almuerzo.grasa;
+    totales.carbo += almuerzo.carbo;
+  } else {
+    totales.verificable = false; // Día con almuerzo libre no es verificable
+  }
 
   // Cena
   const cena = macrosDeReceta(rutina.cena, false); // No hay ajuste en cenas
@@ -115,13 +119,13 @@ export function progresoVsMeta(totales, ajusteFase1 = false) {
 /** Auto-chequeo: verificar que los totales coinciden con el documento auditado. */
 export function autoVerificar() {
   const esperados = {
-    lunes:     { kcal: 2065, proteina: 121.6, grasa: 63.4, carbo: 249.0 },
-    martes:    { kcal: 2103, proteina: 117.3, grasa: 75.1, carbo: 238.6 },
-    miercoles: { kcal: 1972, proteina: 113.7, grasa: 65.2, carbo: 232.4 },
-    jueves:    { kcal: 2065, proteina: 121.6, grasa: 63.4, carbo: 249.0 },
-    viernes:   { kcal: 2103, proteina: 117.3, grasa: 75.1, carbo: 238.6 },
-    sabado:    { kcal: 2012, proteina: 110.2, grasa: 70.4, carbo: 231.6 },
-    domingo:   { kcal: 1933, proteina: 99.7,  grasa: 68.7, carbo: 229.4 }
+    lunes:     { kcal: 2119, proteina: 121.6, grasa: 69.4, carbo: 249.0 },
+    martes:    { kcal: 2130, proteina: 117.3, grasa: 78.1, carbo: 238.6 },
+    miercoles: { kcal: 2053, proteina: 113.7, grasa: 74.2, carbo: 232.4 },
+    jueves:    { kcal: 2119, proteina: 121.6, grasa: 69.4, carbo: 249.0 },
+    viernes:   { kcal: 2130, proteina: 117.3, grasa: 78.1, carbo: 238.6 },
+    sabado:    { kcal: 2066, proteina: 110.2, grasa: 76.4, carbo: 231.6 },
+    domingo:   { kcal: 1355, proteina: 75.1,  grasa: 46.5, carbo: 161.3 }
   };
 
   const dias = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];

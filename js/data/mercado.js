@@ -161,7 +161,7 @@ export const MERCADO = {
     consistencia: 'Lo que se compra = exactamente lo que usan las recetas. Ningún ingrediente falta ni sobra sin razón.',
     salmon_fresco: 'El salmón se compra FRESCO el sábado por la mañana. Se cocina ese mismo día. No se puede guardar para el día siguiente.',
     tofu_nota: 'Abierto, el tofu Mori-Nu dura 3 días en nevera. Usar siempre contenedor de vidrio. Se necesitan 920 g/semana (3 paquetes de ~310 g).',
-    huevos_nota: 'Se necesitan 24 huevos/semana: 7 para desayunos okayu + 17 para almuerzos y cenas. El batido post-entreno NO lleva huevo.'
+    huevos_nota: 'Se necesitan 21 huevos/semana: 7 para desayunos okayu + 14 para almuerzos y cenas (sin Tamagoyaki domingo). El batido post-entreno NO lleva huevo.'
   }
 };
 
