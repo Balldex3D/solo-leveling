@@ -453,33 +453,105 @@ function renderizarPaso() {
 
 // ============ BATCH / PREP DIARIO ============
 
+function getBatchChecks() {
+  try { return JSON.parse(localStorage.getItem('batch_checks') || '{}'); }
+  catch { return {}; }
+}
+
 function renderizarBatch() {
   const container = document.getElementById('batch-content');
   const diaDelMes = getDiaDelMes();
+  const checks = getBatchChecks();
 
-  let html = '';
+  const batch = getBatchCongelables();
+  const totalBatch = batch?.tareas?.length || 0;
+  const checkedBatch = batch?.tareas?.filter((_, i) => checks[`domingo_noche_${i}`]).length || 0;
 
-  // SIEMPRE mostrar batch congelables (domingo noche)
-  const batchCongelables = getBatchCongelables();
-  if (batchCongelables) {
-    html += renderizarItemBatch(batchCongelables);
-  }
+  let html = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-md);">
+      <span class="text-secondary" style="font-size:12px;">
+        Batch domingo: <strong style="color:${checkedBatch === totalBatch ? 'var(--clr-verde)' : 'var(--clr-cian)'};">${checkedBatch}/${totalBatch}</strong> tareas listas
+      </span>
+      <button id="batch-reset-btn" style="font-size:11px;padding:4px 10px;border-radius:2px;opacity:0.7;">
+        ↺ Nueva semana
+      </button>
+    </div>
+  `;
 
-  // Luego mostrar prep diario del día actual
+  if (batch) html += renderizarItemBatch(batch, checks);
+
   const prepDiario = getPrepDiario(diaDelMes);
-  if (prepDiario) {
-    html += renderizarItemBatch(prepDiario);
-  }
+  if (prepDiario) html += renderizarItemBatch(prepDiario, checks);
 
-  if (!html) {
+  if (!batch && !prepDiario) {
     container.innerHTML = `<div class="panel"><p class="text-secondary">No hay prep registrado.</p></div>`;
     return;
   }
 
   container.innerHTML = html;
+
+  document.getElementById('batch-reset-btn')?.addEventListener('click', () => {
+    if (confirm('¿Limpiar todos los checks? Haz esto al empezar una nueva semana.')) {
+      localStorage.removeItem('batch_checks');
+      renderizarBatch();
+    }
+  });
+
+  container.querySelectorAll('.batch-check').forEach(cb => {
+    cb.addEventListener('change', (e) => {
+      const c = getBatchChecks();
+      c[e.target.dataset.id] = e.target.checked;
+      localStorage.setItem('batch_checks', JSON.stringify(c));
+      const card = e.target.closest('.batch-task-card');
+      if (card) aplicarEstiloCheck(card, e.target.checked);
+      // Actualizar contador
+      const span = container.querySelector('[data-batch-count]');
+      if (span) {
+        const total = container.querySelectorAll('.batch-check[data-id^="domingo_noche"]').length;
+        const done = container.querySelectorAll('.batch-check[data-id^="domingo_noche"]:checked').length;
+        span.textContent = `${done}/${total}`;
+        span.style.color = done === total ? 'var(--clr-verde)' : 'var(--clr-cian)';
+      }
+    });
+  });
 }
 
-function renderizarItemBatch(prep) {
+function aplicarEstiloCheck(card, checked) {
+  card.style.opacity = checked ? '0.45' : '1';
+  card.style.borderLeftColor = checked ? 'var(--clr-verde)' : (card.dataset.borde || '');
+  const tituloEl = card.querySelector('.batch-titulo');
+  if (tituloEl) {
+    tituloEl.style.textDecoration = checked ? 'line-through' : '';
+    tituloEl.style.color = checked ? '#888' : '#fff';
+  }
+}
+
+function renderBatchTarea(tarea, i, taskId, checks, borde) {
+  const isChecked = checks[taskId] || false;
+  const lineas = (tarea.texto || tarea).split('\n').filter(l => l.trim());
+  const tituloPaso = lineas[0];
+  const detalles = lineas.slice(1);
+  return `
+    <div class="batch-task-card"
+         data-borde="${borde}"
+         style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid ${isChecked ? 'var(--clr-verde)' : borde};opacity:${isChecked ? '0.45' : '1'};">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;">
+        <strong class="batch-titulo" style="font-size:14px;flex:1;color:${isChecked ? '#888' : '#fff'};${isChecked ? 'text-decoration:line-through;' : ''}">${i + 1}. ${tituloPaso}</strong>
+        <input type="checkbox" class="batch-check" data-id="${taskId}"
+               style="width:22px;height:22px;min-width:22px;accent-color:var(--clr-verde);cursor:pointer;margin-top:2px;"
+               ${isChecked ? 'checked' : ''}>
+      </div>
+      ${detalles.length > 0 ? `
+        <div style="margin-top:var(--space-sm);font-size:13px;line-height:1.6;color:var(--clr-text-primary);">
+          ${detalles.map(linea => `<div style="margin:4px 0;">${linea}</div>`).join('')}
+        </div>
+      ` : ''}
+      ${tarea.timer_segundos ? `<div class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);">⏱ ${Math.floor(tarea.timer_segundos / 60)}:${(tarea.timer_segundos % 60).toString().padStart(2, '0')} min</div>` : ''}
+    </div>
+  `;
+}
+
+function renderizarItemBatch(prep, checks = {}) {
   if (!prep) return '';
 
   let html = `
@@ -489,67 +561,34 @@ function renderizarItemBatch(prep) {
       ${prep.nota ? `<p class="text-secondary"><em>${prep.nota}</em></p>` : ''}
   `;
 
-  // SECCIÓN TAREAS (batch congelables) o MAÑANA (prep diario)
   const tareas = prep.tareas || prep.tareas_manana;
   const esNoche = prep.dia === 'domingo_noche';
   if (tareas && tareas.length > 0) {
-    const titulo = esNoche ? '🌙 BATCH CONGELABLES (DOMINGO NOCHE)' : '🌅 MAÑANA (AL LEVANTARSE)';
+    const tituloSeccion = esNoche ? '🌙 BATCH CONGELABLES (DOMINGO NOCHE)' : '🌅 MAÑANA (AL LEVANTARSE)';
     const color = esNoche ? 'var(--clr-ambar)' : 'var(--clr-verde)';
     const sombra = esNoche ? 'rgba(255,207,92,.5)' : 'rgba(65,240,166,.5)';
     const borde = esNoche ? 'var(--clr-ambar)' : 'var(--clr-verde)';
     html += `
       <div style="margin-top:var(--space-lg);">
-        <strong style="color:${color};text-shadow:0 0 8px ${sombra};">${titulo}</strong>
+        <strong style="color:${color};text-shadow:0 0 8px ${sombra};">${tituloSeccion}</strong>
         <div style="margin-top:var(--space-md);">
-          ${tareas.map((tarea, i) => {
-            const lineas = (tarea.texto || tarea).split('\n').filter(l => l.trim());
-            const titulo = lineas[0];
-            const detalles = lineas.slice(1);
-            return `
-              <div style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid ${borde};">
-                <strong style="font-size:14px;color:#fff;">${i + 1}. ${titulo}</strong>
-                ${detalles.length > 0 ? `
-                  <div style="margin-top:var(--space-sm);font-size:13px;line-height:1.6;color:var(--clr-text-primary);">
-                    ${detalles.map(linea => `<div style="margin:4px 0;">${linea}</div>`).join('')}
-                  </div>
-                ` : ''}
-                ${tarea.timer_segundos ? `<div class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);display:flex;align-items:center;gap:4px;">⏱ Tiempo: ${Math.floor(tarea.timer_segundos / 60)}:${(tarea.timer_segundos % 60).toString().padStart(2, '0')} min</div>` : ''}
-              </div>
-            `;
-          }).join('')}
+          ${tareas.map((tarea, i) => renderBatchTarea(tarea, i, `${prep.dia}_${i}`, checks, borde)).join('')}
         </div>
       </div>
     `;
   }
 
-  // SECCIÓN NOCHE (si existe)
   if (prep.tareas_noche && prep.tareas_noche.length > 0) {
     html += `
       <div style="margin-top:var(--space-lg);">
         <strong style="color:var(--clr-ambar);text-shadow:0 0 8px rgba(255,207,92,.5);">🌙 ESTA NOCHE</strong>
         <div style="margin-top:var(--space-md);">
-          ${prep.tareas_noche.map((tarea, i) => {
-            const lineas = (tarea.texto || tarea).split('\n').filter(l => l.trim());
-            const titulo = lineas[0];
-            const detalles = lineas.slice(1);
-            return `
-              <div style="padding:var(--space-md);background:var(--clr-darker);margin-bottom:var(--space-md);border-radius:2px;border-left:3px solid var(--clr-ambar);">
-                <strong style="font-size:14px;color:#fff;">${i + 1}. ${titulo}</strong>
-                ${detalles.length > 0 ? `
-                  <div style="margin-top:var(--space-sm);font-size:13px;line-height:1.6;color:var(--clr-text-primary);">
-                    ${detalles.map(linea => `<div style="margin:4px 0;">${linea}</div>`).join('')}
-                  </div>
-                ` : ''}
-                ${tarea.timer_segundos ? `<div class="text-secondary" style="font-size:12px;margin-top:var(--space-sm);display:flex;align-items:center;gap:4px;">⏱ Tiempo: ${Math.floor(tarea.timer_segundos / 60)}:${(tarea.timer_segundos % 60).toString().padStart(2, '0')} min</div>` : ''}
-              </div>
-            `;
-          }).join('')}
+          ${prep.tareas_noche.map((tarea, i) => renderBatchTarea(tarea, i, `${prep.dia}_noche_${i}`, checks, 'var(--clr-ambar)')).join('')}
         </div>
       </div>
     `;
   }
 
-  // ALMACENAMIENTO
   if (prep.almacenamiento) {
     html += `
       <div style="margin-top:var(--space-lg);padding:var(--space-md);background:var(--clr-darker);border-left:4px solid var(--clr-cian);border-radius:2px;">
