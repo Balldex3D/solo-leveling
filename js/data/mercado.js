@@ -67,7 +67,7 @@ export const MERCADO = {
       id: 'arroz',
       producto: 'Arroz blanco',
       cantidad: '5 kg',
-      nota: '~1,105 g/semana: desayunos 7×35 g=245 g · almuerzos 6×80 g + 1×85 g (sáb)=565 g · cenas 5×75 g=375 g (lun/jue no llevan arroz en cena). Domingo almuerzo = LIBRE.'
+      nota: '~1,175 g/semana: desayunos 7×35 g=245 g · almuerzos 5×90 g (lun/mar/mié/jue/vie) + 1×95 g (sáb)=545 g + cenas 5×75 g=375 g (lun/jue sin arroz en cena). Domingo almuerzo = LIBRE.'
     },
     {
       id: 'udon',
