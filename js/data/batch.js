@@ -68,16 +68,12 @@ export const PREP_DIARIO = {
       {
         texto: 'DESCONGELA POLLO CUBOS (MIN 5)\n\n108 g de pollo cocido en cubos para el almuerzo (Chicken Teriyaki).\n📋 Ya está COCIDO — solo necesita descongelarse.\n\nElige UNA opción:\n\n• FÁCIL — noche anterior:\n  Saca el contenedor del congelador\n  Mételo directo a la nevera antes de dormir\n  Al despertar ya está listo\n\n• RÁPIDO — misma mañana:\n  Pon el contenedor CERRADO dentro de un tazón\n  Llena el tazón con agua fría del grifo\n  Espera 15 min sin tocar nada\n  El pollo estará descongelado\n\nEl pollo descongelado se usa directo en la receta — el arroz caliente lo templará.',
         timer_segundos: null
-      },
-      {
-        texto: 'DIVIDE Y GUARDA ARROZ (MIN 20)\n\n125 g crudo rinde ~312 g cocidos. Necesitas 2 porciones.\n\n⚠️ Primero espera 2 minutos que enfríe un poco.\n   Si tapas el arroz muy caliente, suda y queda aguado.\n\n1. Pon un contenedor vacío sobre la báscula. Presiona TARE (poner en 0)\n2. Con una cuchara, pasa arroz al contenedor hasta que diga 90 g\n   Etiqueta: "DESAYUNO — Lunes" (Arroz Miso Tamago)\n   Tapa el contenedor. A la NEVERA\n3. El arroz que quedó en la arrocera = ALMUERZO (~222 g)\n   Pásalo a otro contenedor. Etiqueta: "ALMUERZO — Lunes" (Chicken Teriyaki)\n   Tapa el contenedor. A la NEVERA',
-        timer_segundos: null
       }
     ],
     tareas_noche: [],
     almacenamiento: [
       '❄️ CONGELADOR (sacado) — POLLO CUBOS (108 g): para almuerzo mañana',
-      '📦 NEVERA — ARROZ (~312 g cocido): Lunes desayuno 90 g + Lunes almuerzo 222 g'
+      '🍚 ARROCERA (keep warm) — ARROZ (~312 g cocido): listo todo el día'
     ]
   },
 
@@ -98,16 +94,12 @@ export const PREP_DIARIO = {
       {
         texto: 'DESCONGELA RES MARINADA (MIN 5)\n\n110 g de res marinada para el almuerzo (Gyudon).\n⚠️ Está CRUDA — NO la comas así. Se cocina en la receta del almuerzo.\n\nElige UNA opción:\n\n• FÁCIL — noche anterior:\n  Saca el contenedor del congelador\n  Mételo directo a la nevera antes de dormir\n  Al despertar ya está lista para cocinar\n\n• RÁPIDO — misma mañana:\n  Pon el contenedor CERRADO dentro de un tazón\n  Llena el tazón con agua fría del grifo\n  Espera 15 min sin tocar nada\n  La res estará descongelada\n\n⚠️ La res descongelada se cocina al momento del almuerzo. NO antes.',
         timer_segundos: null
-      },
-      {
-        texto: 'DIVIDE Y GUARDA ARROZ (MIN 20)\n\n200 g crudo rinde ~500 g cocidos. Necesitas 3 porciones.\n\n⚠️ Primero espera 2 minutos que enfríe un poco.\n   Si tapas el arroz muy caliente, suda y queda aguado.\n\n1. Pon un contenedor vacío sobre la báscula. Presiona TARE (poner en 0)\n2. Con una cuchara, pasa arroz al contenedor hasta que diga 90 g\n   Etiqueta: "DESAYUNO — Martes" (Arroz Miso Tamago)\n   Tapa el contenedor. A la NEVERA\n3. Pon otro contenedor vacío sobre la báscula. Presiona TARE de nuevo (poner en 0)\n4. Pasa arroz hasta que diga 225 g\n   Etiqueta: "ALMUERZO — Martes" (Gyudon)\n   Tapa el contenedor. A la NEVERA\n5. El arroz que quedó en la arrocera = CENA (~185 g)\n   Pásalo al último contenedor. Etiqueta: "CENA — Martes" (Tofu Don)\n   Tapa el contenedor. A la NEVERA',
-        timer_segundos: null
       }
     ],
     tareas_noche: [],
     almacenamiento: [
       '❄️ CONGELADOR (sacado) — RES MARINADA (110 g): para almuerzo mañana',
-      '📦 NEVERA — ARROZ (~500 g cocido): Mar desayuno 90 g + almuerzo 225 g + cena 185 g'
+      '🍚 ARROCERA (keep warm) — ARROZ (~500 g cocido): listo todo el día'
     ]
   },
 
@@ -128,16 +120,12 @@ export const PREP_DIARIO = {
       {
         texto: 'DESCONGELA POLLO DESHILACHADO (MIN 5)\n\n48 g de pollo deshilachado para el almuerzo (Egg Soboro).\n📋 Ya está COCIDO — solo necesita descongelarse.\n\nElige UNA opción:\n\n• FÁCIL — noche anterior:\n  Saca el contenedor del congelador\n  Mételo directo a la nevera antes de dormir\n  Al despertar ya está listo\n\n• RÁPIDO — misma mañana:\n  Pon el contenedor CERRADO dentro de un tazón\n  Llena el tazón con agua fría del grifo\n  Espera 10 min sin tocar nada\n  El pollo estará descongelado\n\nEl pollo descongelado se usa directo en la receta — el arroz caliente lo templará.',
         timer_segundos: null
-      },
-      {
-        texto: 'DIVIDE Y GUARDA ARROZ (MIN 20)\n\n200 g crudo rinde ~500 g cocidos. Necesitas 3 porciones.\n\n⚠️ Primero espera 2 minutos que enfríe un poco.\n   Si tapas el arroz muy caliente, suda y queda aguado.\n\n1. Pon un contenedor vacío sobre la báscula. Presiona TARE (poner en 0)\n2. Con una cuchara, pasa arroz al contenedor hasta que diga 90 g\n   Etiqueta: "DESAYUNO — Miércoles" (Arroz Miso Tamago)\n   Tapa el contenedor. A la NEVERA\n3. Pon otro contenedor vacío sobre la báscula. Presiona TARE de nuevo (poner en 0)\n4. Pasa arroz hasta que diga 225 g\n   Etiqueta: "ALMUERZO — Miércoles" (Egg Soboro)\n   Tapa el contenedor. A la NEVERA\n5. El arroz que quedó en la arrocera = CENA (~185 g)\n   Pásalo al último contenedor. Etiqueta: "CENA — Miércoles" (Sopa Miso)\n   Tapa el contenedor. A la NEVERA',
-        timer_segundos: null
       }
     ],
     tareas_noche: [],
     almacenamiento: [
       '❄️ CONGELADOR (sacado) — POLLO DESHILACHADO (48 g): para almuerzo mañana',
-      '📦 NEVERA — ARROZ (~500 g cocido): Mié desayuno 90 g + almuerzo 225 g + cena 185 g'
+      '🍚 ARROCERA (keep warm) — ARROZ (~500 g cocido): listo todo el día'
     ]
   },
 
@@ -158,16 +146,12 @@ export const PREP_DIARIO = {
       {
         texto: 'DESCONGELA POLLO CUBOS (MIN 5)\n\n108 g de pollo cocido en cubos para el almuerzo (Chicken Teriyaki).\n📋 Ya está COCIDO — solo necesita descongelarse.\n\nElige UNA opción:\n\n• FÁCIL — noche anterior:\n  Saca el contenedor del congelador\n  Mételo directo a la nevera antes de dormir\n  Al despertar ya está listo\n\n• RÁPIDO — misma mañana:\n  Pon el contenedor CERRADO dentro de un tazón\n  Llena el tazón con agua fría del grifo\n  Espera 15 min sin tocar nada\n  El pollo estará descongelado\n\nEl pollo descongelado se usa directo en la receta — el arroz caliente lo templará.',
         timer_segundos: null
-      },
-      {
-        texto: 'DIVIDE Y GUARDA ARROZ (MIN 20)\n\n125 g crudo rinde ~312 g cocidos. Necesitas 2 porciones.\n\n⚠️ Primero espera 2 minutos que enfríe un poco.\n   Si tapas el arroz muy caliente, suda y queda aguado.\n\n1. Pon un contenedor vacío sobre la báscula. Presiona TARE (poner en 0)\n2. Con una cuchara, pasa arroz al contenedor hasta que diga 90 g\n   Etiqueta: "DESAYUNO — Jueves" (Arroz Miso Tamago)\n   Tapa el contenedor. A la NEVERA\n3. El arroz que quedó en la arrocera = ALMUERZO (~222 g)\n   Pásalo a otro contenedor. Etiqueta: "ALMUERZO — Jueves" (Chicken Teriyaki)\n   Tapa el contenedor. A la NEVERA',
-        timer_segundos: null
       }
     ],
     tareas_noche: [],
     almacenamiento: [
       '❄️ CONGELADOR (sacado) — POLLO CUBOS (108 g): para almuerzo mañana',
-      '📦 NEVERA — ARROZ (~312 g cocido): Jue desayuno 90 g + Jue almuerzo 222 g'
+      '🍚 ARROCERA (keep warm) — ARROZ (~312 g cocido): listo todo el día'
     ]
   },
 
@@ -188,16 +172,12 @@ export const PREP_DIARIO = {
       {
         texto: 'DESCONGELA RES MARINADA (MIN 5)\n\n110 g de res marinada para el almuerzo (Gyudon).\n⚠️ Está CRUDA — NO la comas así. Se cocina en la receta del almuerzo.\n\nElige UNA opción:\n\n• FÁCIL — noche anterior:\n  Saca el contenedor del congelador\n  Mételo directo a la nevera antes de dormir\n  Al despertar ya está lista para cocinar\n\n• RÁPIDO — misma mañana:\n  Pon el contenedor CERRADO dentro de un tazón\n  Llena el tazón con agua fría del grifo\n  Espera 15 min sin tocar nada\n  La res estará descongelada\n\n⚠️ La res descongelada se cocina al momento del almuerzo. NO antes.',
         timer_segundos: null
-      },
-      {
-        texto: 'DIVIDE Y GUARDA ARROZ (MIN 20)\n\n200 g crudo rinde ~500 g cocidos. Necesitas 3 porciones.\n\n⚠️ Primero espera 2 minutos que enfríe un poco.\n   Si tapas el arroz muy caliente, suda y queda aguado.\n\n1. Pon un contenedor vacío sobre la báscula. Presiona TARE (poner en 0)\n2. Con una cuchara, pasa arroz al contenedor hasta que diga 90 g\n   Etiqueta: "DESAYUNO — Viernes" (Arroz Miso Tamago)\n   Tapa el contenedor. A la NEVERA\n3. Pon otro contenedor vacío sobre la báscula. Presiona TARE de nuevo (poner en 0)\n4. Pasa arroz hasta que diga 225 g\n   Etiqueta: "ALMUERZO — Viernes" (Gyudon)\n   Tapa el contenedor. A la NEVERA\n5. El arroz que quedó en la arrocera = CENA (~185 g)\n   Pásalo al último contenedor. Etiqueta: "CENA — Viernes" (Tofu Don)\n   Tapa el contenedor. A la NEVERA',
-        timer_segundos: null
       }
     ],
     tareas_noche: [],
     almacenamiento: [
       '❄️ CONGELADOR (sacado) — RES MARINADA (110 g): para almuerzo mañana',
-      '📦 NEVERA — ARROZ (~500 g cocido): Vie desayuno 90 g + almuerzo 225 g + cena 185 g'
+      '🍚 ARROCERA (keep warm) — ARROZ (~500 g cocido): listo todo el día'
     ]
   },
 
@@ -218,16 +198,12 @@ export const PREP_DIARIO = {
       {
         texto: 'COMPRA SALMÓN FRESCO (MIN 5)\n\n130 g de filete de salmón FRESCO (NO congelado).\n\n• Pídelo en el mercado esta mañana: "130 g de salmón filete, con piel"\n• Guárdalo en el refrigerador hasta el momento de cocinar (almuerzo)\n• Cocina SIEMPRE el mismo día de la compra',
         timer_segundos: null
-      },
-      {
-        texto: 'DIVIDE Y GUARDA ARROZ (MIN 20)\n\n205 g crudo rinde ~512 g cocidos. Necesitas 3 porciones.\n\n⚠️ Primero espera 2 minutos que enfríe un poco.\n   Si tapas el arroz muy caliente, suda y queda aguado.\n\n1. Pon un contenedor vacío sobre la báscula. Presiona TARE (poner en 0)\n2. Con una cuchara, pasa arroz al contenedor hasta que diga 90 g\n   Etiqueta: "DESAYUNO — Sábado" (Arroz Miso Tamago)\n   Tapa el contenedor. A la NEVERA\n3. Pon otro contenedor vacío sobre la báscula. Presiona TARE de nuevo (poner en 0)\n4. Pasa arroz hasta que diga 237 g\n   Etiqueta: "ALMUERZO — Sábado" (Salmon Don)\n   Tapa el contenedor. A la NEVERA\n5. El arroz que quedó en la arrocera = CENA (~185 g)\n   Pásalo al último contenedor. Etiqueta: "CENA — Sábado" (Sopa Miso)\n   Tapa el contenedor. A la NEVERA',
-        timer_segundos: null
       }
     ],
     tareas_noche: [],
     almacenamiento: [
       '🐟 REFRIGERADOR — SALMÓN FRESCO (130 g): para almuerzo de hoy (NO guardar)',
-      '📦 NEVERA — ARROZ (~512 g cocido): Sáb desayuno 90 g + almuerzo 237 g + cena 185 g'
+      '🍚 ARROCERA (keep warm) — ARROZ (~512 g cocido): listo todo el día'
     ]
   },
 
@@ -245,14 +221,10 @@ export const PREP_DIARIO = {
         texto: 'PREP INGREDIENTES (MIN 5 — mientras espera la arrocera)\n\nLa arrocera tarda ~20 min. Aprovecha para dejarlo todo listo.\n\n🧅 CEBOLLA LARGA — 25 g en aros finos:\n   (10 g desayuno + 15 g cena)\n1. Coge la cebolla larga. Con el cuchillo, corta y descarta los dos extremos\n2. Pon la cebolla sobre la tabla de cortar\n3. Haz cortes de 2-3 mm de grosor — como rodajas muy finas\n   Cada corte = un aro\n4. Pon un contenedor vacío en la báscula → presiona TARE\n5. Pasa los aros al contenedor hasta que marque 25 g\n6. Tapa el contenedor → NEVERA\n\n✅ Al cocinar, ya solo sacas y usas.',
         timer_segundos: null
       },
-      {
-        texto: 'DIVIDE Y GUARDA ARROZ (MIN 20)\n\n110 g crudo rinde ~275 g cocidos. Necesitas 2 porciones.\n⚠️ HOY NO HAY ALMUERZO — el almuerzo del domingo es LIBRE, comes por fuera.\n\n⚠️ Primero espera 2 minutos que enfríe un poco.\n   Si tapas el arroz muy caliente, suda y queda aguado.\n\n1. Pon un contenedor vacío sobre la báscula. Presiona TARE (poner en 0)\n2. Con una cuchara, pasa arroz al contenedor hasta que diga 90 g\n   Etiqueta: "DESAYUNO — Domingo" (Arroz Miso Tamago)\n   Tapa el contenedor. A la NEVERA\n3. El arroz que quedó en la arrocera = CENA (~185 g)\n   Pásalo a otro contenedor. Etiqueta: "CENA — Domingo" (Sopa Miso)\n   Tapa el contenedor. A la NEVERA',
-        timer_segundos: null
-      }
     ],
     tareas_noche: [],
     almacenamiento: [
-      '📦 NEVERA — ARROZ (~275 g cocido): Domingo desayuno 90 g + Domingo cena 185 g',
+      '🍚 ARROCERA (keep warm) — ARROZ (~275 g cocido): listo todo el día',
       '✓ ALMUERZO LIBRE — no hay prep'
     ]
   }
