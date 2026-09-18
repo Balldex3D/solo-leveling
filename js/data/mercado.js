@@ -21,8 +21,8 @@ export const MERCADO = {
     {
       id: 'huevos',
       producto: 'Huevos',
-      cantidad: '21 unidades',
-      nota: 'Desayuno okayu ×7 (1 c/u) = 7 · Mar almuerzo Gyudon 1 · Mié almuerzo Soboro 3 · Lun cena Miso Udon 2 · Mar cena Tofu Don 1 · Mié cena Sopa Miso 1 · Jue cena Miso Udon 2 · Vie almuerzo Gyudon 1 · Vie cena Tofu Don 1 · Sáb cena Sopa Miso 1 · Dom cena Sopa Miso 1 = 21 ud. El batido NO lleva huevo. Domingo almuerzo es LIBRE.'
+      cantidad: '28 unidades',
+      nota: 'Desayuno okayu ×7 (2 c/u) = 14 · Mar almuerzo Gyudon 1 · Mié almuerzo Soboro 3 · Lun cena Miso Udon 2 · Mar cena Tofu Don 1 · Mié cena Sopa Miso 1 · Jue cena Miso Udon 2 · Vie almuerzo Gyudon 1 · Vie cena Tofu Don 1 · Sáb cena Sopa Miso 1 · Dom cena Sopa Miso 1 = 28 ud. El batido NO lleva huevo. Domingo almuerzo es LIBRE.'
     },
     {
       id: 'tofu',
@@ -53,6 +53,12 @@ export const MERCADO = {
       producto: 'Banano',
       cantidad: '7 unidades (~700 g)',
       nota: '1 banano de 100 g al día para el batido post-entreno. Comprar maduros pero firmes.'
+    },
+    {
+      id: 'mandarina',
+      producto: 'Mandarina',
+      cantidad: '7 unidades (~700 g)',
+      nota: 'Snack diario — 100 g (1 mandarina) entre almuerzo y cena. Comprar firmes y aromáticas.'
     }
   ],
 
@@ -152,6 +158,12 @@ export const MERCADO = {
       producto: 'Creatina monohidrato',
       cantidad: '500 g',
       nota: '5 g/día × 7 días = 35 g/semana para el batido post-entreno.'
+    },
+    {
+      id: 'cebada_perlada',
+      producto: 'Cebada perlada',
+      cantidad: '500 g (tienda naturista)',
+      nota: 'Para hacer mugicha casero. Tostar 200 g en sartén Rena Ware seca → guarda en frasco. 30 g por jarra de 2.5 L = ~6-7 jarras por tanda. Compra mensual — 500 g dura ~1 mes con consumo diario.'
     }
   ],
 
@@ -161,7 +173,7 @@ export const MERCADO = {
     consistencia: 'Lo que se compra = exactamente lo que usan las recetas. Ningún ingrediente falta ni sobra sin razón.',
     salmon_fresco: 'El salmón se compra FRESCO el sábado por la mañana. Se cocina ese mismo día. No se puede guardar para el día siguiente.',
     tofu_nota: 'Abierto, el tofu Mori-Nu dura 3 días en nevera. Usar siempre contenedor de vidrio. Se necesitan 920 g/semana (3 paquetes de ~310 g).',
-    huevos_nota: 'Se necesitan 21 huevos/semana: 7 para desayunos okayu + 14 para almuerzos y cenas (sin Tamagoyaki domingo). El batido post-entreno NO lleva huevo.'
+    huevos_nota: 'Se necesitan 28 huevos/semana: 14 para desayunos okayu (2 por día) + 14 para almuerzos y cenas. El batido post-entreno NO lleva huevo.'
   }
 };
 

@@ -295,12 +295,13 @@ export const RECETAS = {
     ajuste_fase1: null,
     regla_especial: 'Sin cafeína. Sin azúcar. Cero calorías. Se puede tomar sin límite como agua.',
     ingredientes: [
-      { nombre: 'Bolsitas mugicha (cebada tostada)', crudo: '1 bolsita', kcal: 0, p: 0, g: 0, c: 0 },
-      { nombre: 'Agua fría', crudo: '1 litro', kcal: 0, p: 0, g: 0, c: 0 }
+      { nombre: 'Cebada perlada tostada', crudo: '30 g (por jarra de 2.5 L)', kcal: 0, p: 0, g: 0, c: 0 },
+      { nombre: 'Agua fría', crudo: '2.5 litros', kcal: 0, p: 0, g: 0, c: 0 }
     ],
     pasos: [
-      'OPCIÓN FRÍA — la mejor para Chía (más refrescante):\n1. Llena una jarra o botella con 1 litro de agua fría\n2. Mete 1 bolsita de mugicha\n3. A la NEVERA por mínimo 30 minutos\n   (Puede quedarse toda la noche — más oscuro el color, más sabor)\n4. Retira la bolsita. Sirve directo o con hielo\n\n💡 Haz una jarra el domingo — dura 3-4 días en nevera.',
-      'OPCIÓN CALIENTE — para mañanas frías:\n1. Hierve 1 litro de agua\n2. Apaga el fuego. Mete 1 bolsita\n3. Deja reposar 5 minutos\n4. Retira la bolsita. Sirve en taza\n\nPuede tomarse caliente o dejar enfriar y meter a la nevera.'
+      'PASO 1 — TOSTAR LA CEBADA (una vez, dura meses):\n1. Pon la sartén Rena Ware SECA a fuego MEDIO — sin agua, sin aceite, sin prueba de gotas\n2. Agrega 200 g de cebada perlada cruda directamente\n3. Revuelve sin parar durante 8-10 minutos\n4. Cuando esté café oscuro y huela a tostado (como galleta o café), retira del fuego\n5. Deja enfriar completamente\n6. Guarda en frasco de vidrio tapado — dura meses a temperatura ambiente\n\n💡 Con 200 g tostados tienes para ~6-7 jarras (2-3 semanas de mugicha diaria).',
+      'PASO 2 — HACER LA JARRA (cada 1-2 días):\n1. Llena una jarra con 2.5 litros de agua fría\n2. Pesa 30 g de cebada tostada del frasco en la báscula\n3. Agrégalos a la jarra\n4. Mete a la NEVERA mínimo 30 minutos\n5. Cuela la cebada antes de servir\n6. Sirve frío directo. Toda la jarra = un día de hidratación\n\n🎯 Meta: 2.5 litros mínimo al día. Ve aumentando poco a poco hasta llegar.',
+      'PASO 3 — VERSIÓN CALIENTE (opcional, para mañanas frías):\n1. Hierve 500 ml de agua en la ollita Rena Ware\n2. Apaga el fuego. Agrega 6 g de cebada tostada\n3. Deja reposar 5 minutos. Cuela y sirve en taza'
     ]
   },
 
