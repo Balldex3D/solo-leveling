@@ -75,12 +75,21 @@ async function init() {
     mostrarOnboarding();
   } else {
     localStorage.setItem('onboarding-completado', 'true');
-    irAPanel('dashboard');
+    const hashScreen = location.hash.replace('#', '');
+    const initialScreen = hashScreen || 'dashboard';
+    history.replaceState({ screen: initialScreen }, '', '#' + initialScreen);
+    irAPanel(initialScreen, false);
   }
 
   if (Notification.permission === 'default') {
     Notification.requestPermission();
   }
+
+  // Botón atrás de Android: navega entre pantallas en vez de salir
+  window.addEventListener('popstate', (e) => {
+    const screen = e.state?.screen || 'dashboard';
+    irAPanel(screen, false);
+  });
 
   setupEventListeners();
 }
@@ -118,7 +127,7 @@ function setupEventListeners() {
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       store.sincronizarDia();
-      irAPanel(screenActual);
+      irAPanel(screenActual, false);
     }
   });
 
@@ -171,7 +180,11 @@ function setupEventListeners() {
   });
 }
 
-function irAPanel(screen) {
+function irAPanel(screen, pushHistory = true) {
+  if (pushHistory) {
+    history.pushState({ screen }, '', '#' + screen);
+  }
+
   // Ocultar todos
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
 
