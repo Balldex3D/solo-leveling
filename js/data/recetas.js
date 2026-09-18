@@ -7,12 +7,12 @@ export const RECETAS = {
     rango: null,
     cuando: 'Desayuno — Todos los días (~08:45)',
     tiempo_min: 8,
-    kcal: 291, proteina_g: 9.7, grasa_g: 13.8, carbo_g: 31,
+    kcal: 361, proteina_g: 15.7, grasa_g: 18.8, carbo_g: 31.5,
     ajuste_fase1: null,
     regla_especial: 'El miso NUNCA se hierve — se disuelve en agua caliente aparte, no en olla al fuego.',
     ingredientes: [
       { nombre: 'Arroz blanco (del batch)', crudo: '35 g', cocido: '~90 g', kcal: 123, p: 2.2, g: 0.3, c: 27 },
-      { nombre: 'Huevo', crudo: '1 ud (50 g)', kcal: 70, p: 6, g: 5, c: 0.5 },
+      { nombre: 'Huevo', crudo: '2 ud (100 g)', kcal: 140, p: 12, g: 10, c: 1 },
       { nombre: 'Ghee (cocción)', crudo: '3 g', kcal: 27, p: 0, g: 3, c: 0 },
       { nombre: 'Pasta miso', crudo: '10 g', kcal: 18, p: 1, g: 0.5, c: 2.5 },
       { nombre: 'Cebolla larga', crudo: '10 g', kcal: 3, p: 0, g: 0, c: 0.5 },
@@ -21,7 +21,7 @@ export const RECETAS = {
     ],
     pasos: [
       'PASO 1 — Miso: En la ollita pequeña a fuego MEDIO, pon 100 ml de agua. Espera hasta que salga vapor (NO dejes que hierva, solo que esté bien caliente). Retira del fuego. Agrega 10 g de pasta miso y revuelve con cucharita hasta que no queden grumos. Déjala a un lado.',
-      { texto: 'PASO 2 — Huevo revuelto: Pon tu sartén Rena Ware PEQUEÑA a fuego MEDIO. Espera 2 minutos VACÍA Y SECA. PRUEBA: Echa 2-3 gotas de agua con los dedos — si las gotas RUEDAN como bolitas sin evaporarse al instante, la sartén está lista. Si se evaporan al toque = muy caliente, baja el fuego y espera 30 seg. Con la sartén lista, agrega una pizca de ghee (o 3 ml de aceite). Rompe el huevo en la sartén. Con espátula de madera, revuelve constantemente en movimientos circulares a fuego MEDIO-BAJO durante 2 minutos. El huevo debe quedar en trozos FIRMES Y OPACOS, completamente amarillo, sin partes brillantes o líquidas.', timer_segundos: 120 },
+      { texto: 'PASO 2 — Huevo revuelto: Pon tu sartén Rena Ware PEQUEÑA a fuego MEDIO. Espera 2 minutos VACÍA Y SECA. PRUEBA: Echa 2-3 gotas de agua con los dedos — si las gotas RUEDAN como bolitas sin evaporarse al instante, la sartén está lista. Si se evaporan al toque = muy caliente, baja el fuego y espera 30 seg. Con la sartén lista, agrega una pizca de ghee (o 3 ml de aceite). Rompe los 2 huevos en la sartén. Con espátula de madera, revuelve constantemente en movimientos circulares a fuego MEDIO-BAJO durante 2-3 minutos. Los huevos deben quedar en trozos FIRMES Y OPACOS, completamente amarillos, sin partes brillantes o líquidas.', timer_segundos: 150 },
       'PASO 3 — Arroz (AHORA, justo antes de armar): Saca del batch 90 g de arroz cocido (la porción del desayuno de la nevera). Ponlo en la sartén Rena Ware pequeña. Agrega 3 cucharadas de agua fría. Tapa con un plato o tapa encima. Fuego MEDIO-BAJO 2-3 minutos. Cuando salga vapor por los bordes = listo. Pásalo al bowl.',
       'PASO 4 — Arma y sirve INMEDIATAMENTE: Coloca el huevo revuelto encima del arroz caliente en el bowl. Pica 10 g de cebolla larga en aros finos (~2-3 mm). Corta 2 g de nori con tijera en tiras delgadas. Rocía 5 ml de aceite de sésamo CRUDO por encima del arroz y el huevo. Espolvorea cebolla y nori. Toma la mini sopa de miso al lado o viértela encima del arroz como salsa. Sirve de inmediato.'
     ]
@@ -67,11 +67,11 @@ export const RECETAS = {
     rango: 'B',
     cuando: 'Almuerzo — Lunes y Jueves',
     tiempo_min: 12,
-    kcal: 633, proteina_g: 40.6, grasa_g: 18.2, carbo_g: 71.6,
-    ajuste_fase1: { descripcion: 'Arroz sube de 60 g a 80 g crudo (ya incluido en kcal).', delta_kcal: 70, delta_p: 1.3, delta_g: 0.2, delta_c: 15.5 },
+    kcal: 668, proteina_g: 41.2, grasa_g: 18.3, carbo_g: 79.3,
+    ajuste_fase1: { descripcion: 'Arroz sube de 60 g a 90 g crudo (ya incluido en kcal).', delta_kcal: 105, delta_p: 1.9, delta_g: 0.3, delta_c: 23.1 },
     regla_especial: null,
     ingredientes: [
-      { nombre: 'Arroz blanco', crudo: '80 g', cocido: '200 g', kcal: 280, p: 5.1, g: 0.7, c: 61.6 },
+      { nombre: 'Arroz blanco', crudo: '90 g', cocido: '225 g', kcal: 315, p: 5.7, g: 0.8, c: 69.3 },
       { nombre: 'Pechuga de pollo (del batch)', crudo: '135 g', cocido: '108 g', kcal: 160, p: 32, g: 3, c: 0 },
       { nombre: 'Ghee (cocción)', crudo: '7 g', kcal: 63, p: 0, g: 7, c: 0 },
       { nombre: 'Espinaca', crudo: '50 g', cocido: '40 g', kcal: 12, p: 1.5, g: 0, c: 1 },
@@ -89,7 +89,7 @@ export const RECETAS = {
       { texto: 'PASO 4: Agrega el pollo cocido a la sartén. Con una espátula de madera o silicona, muévelo cada 15-20 segundos. Cocina 2 minutos. El pollo debe verse DORADO (café claro por fuera, no gris). Si está frío por dentro al probar, 30 segundos más.', timer_segundos: 120 },
       { texto: 'PASO 5: Sin sacar el pollo, agrega a la sartén: 15 ml de salsa de soya (aproximadamente 1 cucharada), 10 ml de mirin (aproximadamente 2 cucharaditas), y 5 g de jengibre rallado fresco. SUBE A FUEGO MEDIO-ALTO (posición 6-7). Revuelve SIN PARAR durante 1 minuto. El líquido debe burbujear y reducirse: al principio hay bastante líquido, al terminar debe verse un glaseado brillante pegado al pollo.', timer_segundos: 60 },
       { texto: 'PASO 6: Pasa TODO el pollo con su salsa a un plato limpio. En la MISMA sartén (sin lavar, para aprovechar los sabores), agrega 50 g de espinaca. Fresca: lávala y sécala bien antes. Congelada: directo. REVUELVE SIN PARAR 1 minuto a fuego MEDIO. La espinaca debe cambiar a verde oscuro brillante y verse marchita (más pequeña, blanda). No pases de 1 minuto o queda aguada.', timer_segundos: 60 },
-      'PASO 7 — Arroz (hazlo AHORA, justo antes de armar el bowl): Saca 200 g de arroz cocido del batch (nevera o congelador). Ponlo en la sartén Rena Ware pequeña. Agrega 3 cucharadas de agua fría. Tapa con un plato o tapa encima. Fuego MEDIO-BAJO 2-3 minutos. Cuando salga vapor por los bordes = listo y HUMEANTE.',
+      'PASO 7 — Arroz (hazlo AHORA, justo antes de armar el bowl): Saca 225 g de arroz cocido del batch (nevera o congelador). Ponlo en la sartén Rena Ware pequeña. Agrega 3 cucharadas de agua fría. Tapa con un plato o tapa encima. Fuego MEDIO-BAJO 2-3 minutos. Cuando salga vapor por los bordes = listo y HUMEANTE.',
       'PASO 8 — Arma el bowl inmediatamente: Coloca el arroz CALIENTE en la BASE del bowl. Encima del arroz, coloca todo el pollo con su glaseado teriyaki en el centro. A un lado, coloca la espinaca marchita.',
       'PASO 9 — Toppings finales: Espolvorea 5 g de semillas de sésamo. Pica 15 g de cebolla larga (parte verde) en aros finos de ~2-3 mm y espolvorea. Rocía 5 ml de aceite de sésamo CRUDO (va al final, NO se cocina) por encima de todo. Sirve de inmediato.'
     ]
@@ -103,11 +103,11 @@ export const RECETAS = {
     rango: 'B',
     cuando: 'Almuerzo — Martes y Viernes',
     tiempo_min: 10,
-    kcal: 653, proteina_g: 35.6, grasa_g: 23.2, carbo_g: 72.1,
+    kcal: 688, proteina_g: 36.2, grasa_g: 23.3, carbo_g: 79.8,
     ajuste_fase1: null,
     regla_especial: null,
     ingredientes: [
-      { nombre: 'Arroz blanco', crudo: '80 g', cocido: '200 g', kcal: 280, p: 5.1, g: 0.7, c: 61.6 },
+      { nombre: 'Arroz blanco', crudo: '90 g', cocido: '225 g', kcal: 315, p: 5.7, g: 0.8, c: 69.3 },
       { nombre: 'Res lomo (tiras, marinada)', crudo: '110 g', cocido: '88 g', kcal: 180, p: 22, g: 10, c: 0 },
       { nombre: 'Huevo', crudo: '1 ud (50 g)', kcal: 70, p: 6, g: 5, c: 0.5 },
       { nombre: 'Cebolla larga', crudo: '30 g', kcal: 10, p: 0.5, g: 0, c: 2 },
@@ -125,7 +125,7 @@ export const RECETAS = {
       { texto: 'PASO 5: BAJA A FUEGO MEDIO (posición 5). Pica 30 g de cebolla larga (toda, parte blanca y verde) en trozos medianos. Agrega a la sartén junto con 5 g de jengibre rallado fresco. REVUELVE SIN PARAR 2 minutos. La cebolla debe verse TRANSLÚCIDA (casi transparente, como de vidrio) y blanda.', timer_segundos: 120 },
       { texto: 'PASO 6: Agrega 15 ml de salsa de soya (1 cucharada) y 10 ml de mirin (2 cucharaditas). SUBE A FUEGO MEDIO-ALTO (posición 6-7). Revuelve SIN PARAR 1 minuto. El líquido se reduce y queda espeso y brillante pegado a la carne. Pasa TODA la carne con su salsa a un plato limpio.', timer_segundos: 60 },
       { texto: 'PASO 7 — Huevo revuelto (en la MISMA sartén, limpia con papel): Baja a FUEGO MEDIO-BAJO (posición 3-4). Rompe 1 huevo en un tazón y bátelo con tenedor 20 segundos. Vierte en la sartén. Revuelve constantemente con espátula durante 2 minutos. El huevo debe quedar en trozos FIRMES Y OPACOS, color amarillo parejo, sin partes brillantes ni líquidas.', timer_segundos: 120 },
-      'PASO 8 — Arroz (hazlo AHORA, justo antes de armar): Saca 200 g de arroz cocido del batch. Ponlo en la sartén Rena Ware pequeña. Agrega 3 cucharadas de agua fría. Tapa con un plato o tapa encima. Fuego MEDIO-BAJO 2-3 minutos. Cuando salga vapor por los bordes = listo.',
+      'PASO 8 — Arroz (hazlo AHORA, justo antes de armar): Saca 225 g de arroz cocido del batch. Ponlo en la sartén Rena Ware pequeña. Agrega 3 cucharadas de agua fría. Tapa con un plato o tapa encima. Fuego MEDIO-BAJO 2-3 minutos. Cuando salga vapor por los bordes = listo.',
       'PASO 9 — Arma el bowl inmediatamente: Coloca el arroz CALIENTE en la BASE. Encima, toda la carne con su glaseado en el centro. Encima de la carne, el huevo revuelto. Espolvorea 5 g de semillas de sésamo. Sirve de inmediato.'
     ]
   },
@@ -138,11 +138,11 @@ export const RECETAS = {
     rango: 'B',
     cuando: 'Almuerzo — Miércoles',
     tiempo_min: 10,
-    kcal: 698, proteina_g: 38.6, grasa_g: 27.7, carbo_g: 71.1,
-    ajuste_fase1: { descripcion: 'Arroz sube de 60 g a 80 g crudo (ya incluido en kcal).', delta_kcal: 70, delta_p: 1.3, delta_g: 0.2, delta_c: 15.5 },
+    kcal: 733, proteina_g: 39.2, grasa_g: 27.8, carbo_g: 78.8,
+    ajuste_fase1: { descripcion: 'Arroz sube de 60 g a 90 g crudo (ya incluido en kcal).', delta_kcal: 105, delta_p: 1.9, delta_g: 0.3, delta_c: 23.1 },
     regla_especial: null,
     ingredientes: [
-      { nombre: 'Arroz blanco', crudo: '80 g', cocido: '200 g', kcal: 280, p: 5.1, g: 0.7, c: 61.6 },
+      { nombre: 'Arroz blanco', crudo: '90 g', cocido: '225 g', kcal: 315, p: 5.7, g: 0.8, c: 69.3 },
       { nombre: 'Huevos', crudo: '3 ud (150 g)', kcal: 210, p: 18, g: 15, c: 1.5 },
       { nombre: 'Ghee (cocción)', crudo: '3 g', kcal: 27, p: 0, g: 3, c: 0 },
       { nombre: 'Pechuga desmenuzada (del batch)', crudo: '60 g', cocido: '48 g', kcal: 70, p: 14, g: 1.5, c: 0 },
@@ -159,8 +159,8 @@ export const RECETAS = {
       { texto: 'INMEDIATAMENTE empieza a REVOLVER SIN PARAR. Usa 3-4 palillos de madera juntos o dos tenedores, como si estuvieras "desmenuzando" el huevo mientras se cocina. El movimiento debe ser RÁPIDO y CONSTANTE durante 3 MINUTOS EXACTOS. NO pares de mover, ni un segundo. Si paras, el huevo se pega en trozos grandes (tortilla). Debe quedar en GRANITOS PEQUEÑOS E IRREGULARES, un poco húmedos pero NO líquidos.', timer_segundos: 180 },
       'Apenas ya NO VEAS HUEVO LÍQUIDO BRILLANTE en la mezcla (a los ~3 minutos), RETIRA DEL FUEGO INMEDIATAMENTE. Coloca la sartén en un lugar seguro.',
       'Saca 48 g de pechuga de pollo ya cocida y desmenuzada del batch. Si viene en un bloque, pesa 48 g. Si está DESMENUZADA, úsala tal cual. Si está en trozos, deshébrala con dos tenedores tirando suavemente en direcciones opuestas hasta que quede toda deshilachada.',
-      'Saca 200 g de arroz cocido del batch (nevera o congelador). Ponlo en la sartén Rena Ware pequeña. Agrega 3 cucharadas de agua fría. Tapa con un plato o tapa encima. Fuego MEDIO-BAJO 2-3 minutos. Cuando salga vapor por los bordes = listo y HUMEANTE.',
-      'Arma el bowl: En un bowl grande, coloca 200 g de arroz caliente en la BASE. Divide mentalmente el arroz en dos mitades. En UNA MITAD, coloca todo el huevo soboro (los granitos que acabas de cocinar). En la OTRA MITAD, coloca todo el pollo desmenuzado. Los dos colores deben verse separados (amarillo de huevo, blanco/café del pollo).',
+      'Saca 225 g de arroz cocido del batch (nevera o congelador). Ponlo en la sartén Rena Ware pequeña. Agrega 3 cucharadas de agua fría. Tapa con un plato o tapa encima. Fuego MEDIO-BAJO 2-3 minutos. Cuando salga vapor por los bordes = listo y HUMEANTE.',
+      'Arma el bowl: En un bowl grande, coloca 225 g de arroz caliente en la BASE. Divide mentalmente el arroz en dos mitades. En UNA MITAD, coloca todo el huevo soboro (los granitos que acabas de cocinar). En la OTRA MITAD, coloca todo el pollo desmenuzado. Los dos colores deben verse separados (amarillo de huevo, blanco/café del pollo).',
       'Termina: Rocía 5 ml de aceite de sésamo CRUDO (NO cocido) sobre el bowl completo. Pica 15 g de cebolla larga (solo la parte verde, si prefieres) en aros finos de aproximadamente 2-3 mm y espolvorea. Espolvorea 5 g de semillas de sésamo. Sirve de inmediato mientras está caliente.'
     ]
   },
@@ -202,11 +202,11 @@ export const RECETAS = {
     rango: 'A',
     cuando: 'Almuerzo — Sábado',
     tiempo_min: 15,
-    kcal: 711, proteina_g: 35.1, grasa_g: 29.9, carbo_g: 70.3,
-    ajuste_fase1: { descripcion: 'Arroz sube de 65 g a 85 g crudo, aceite de oliva de 5 ml a 10 ml (ya incluido en kcal).', delta_kcal: 115, delta_p: 1.3, delta_g: 5.1, delta_c: 15.6 },
+    kcal: 746, proteina_g: 35.7, grasa_g: 30.0, carbo_g: 77.8,
+    ajuste_fase1: { descripcion: 'Arroz sube de 65 g a 95 g crudo, aceite de oliva de 5 ml a 10 ml (ya incluido en kcal).', delta_kcal: 150, delta_p: 1.9, delta_g: 5.3, delta_c: 23.1 },
     regla_especial: null,
     ingredientes: [
-      { nombre: 'Arroz blanco', crudo: '85 g', cocido: '~213 g', kcal: 299, p: 5.6, g: 0.4, c: 66.3 },
+      { nombre: 'Arroz blanco', crudo: '95 g', cocido: '~237 g', kcal: 333, p: 6.2, g: 0.5, c: 73.8 },
       { nombre: 'Salmón filete', crudo: '130 g', cocido: '105 g', kcal: 265, p: 26, g: 17, c: 0 },
       { nombre: 'Sal + pimienta negra', crudo: 'pizca', kcal: 0, p: 0, g: 0, c: 0 },
       { nombre: 'Espinaca', crudo: '50 g', cocido: '40 g', kcal: 12, p: 1.5, g: 0, c: 1 },
@@ -223,8 +223,8 @@ export const RECETAS = {
       'Coloca el salmón en la CANASTA de la air fryer (NO en la bandeja inferior). Si el filete tiene piel, coloca con la PIEL HACIA ABAJO. No pongas nada más encima ni alrededor del salmón.',
       { texto: 'Cocina en tu Oster CKSTAF40WDDF: Presiona TEMPERATURA → 180°C. Presiona TIEMPO → 10 MINUTOS. Presiona START. NO ABRAS antes de los 10 minutos. NO VOLTEES el salmón. A los 10 minutos, abre y verifica: Presiona suavemente con un tenedor. Debe separarse FÁCILMENTE en láminas. El CENTRO debe verse OPACO (rosado-anaranjado sólido, sin brillo vidrioso). Si el centro todavía se ve translúcido (brillante como agua), vuelve a poner: TIEMPO → 3 MINUTOS → START.', timer_segundos: 600 },
       { texto: 'Mientras el salmón se cocina en la air fryer, prepara la espinaca (minuto 2-3): En una sartén pequeña, SIN ACEITE NI GHEE (completamente seca), a fuego MEDIO, coloca 50 g de espinaca. Si es CONGELADA, colócala directo. Si es FRESCA de bolsa, lava bien, pica en trozos medianos y sécala con papel. REVUELVE SIN PARAR durante 1 minuto exacto. La espinaca debe cambiar a VERDE OSCURO BRILLANTE y verse MARCHITA (pierde volumen, se ve más pequeña, blanda). NO pases de 1 minuto.', timer_segundos: 60 },
-      'Cocina el ARROZ FRESCO mientras se cocinan las otras cosas: En una ARROCERA, coloca 85 g de arroz blanco crudo. Agrega ~100-130 ml de agua fría (proporción 1:1.2 a 1:1.5). Por ejemplo, 105 ml de agua. Enciende la arrocera. Ella misma cambiará a "Mantener caliente" cuando esté lista. El arroz rendirá aproximadamente 213 g cocido. ESTE ARROZ ES FRESCO, NO viene del batch.',
-      'Cuando el salmón está listo (opaco en el centro), arma el bowl: En un bowl grande, coloca ~213 g de arroz CALIENTE en la BASE. Encima del arroz, coloca la espinaca marchita. Encima de la espinaca, coloca el salmón entero o en 2-3 trozos grandes.',
+      'Cocina el ARROZ FRESCO mientras se cocinan las otras cosas: En una ARROCERA, coloca 95 g de arroz blanco crudo. Agrega ~115 ml de agua fría (proporción 1:1.2). Enciende la arrocera. Ella misma cambiará a "Mantener caliente" cuando esté lista. El arroz rendirá aproximadamente 237 g cocido. ESTE ARROZ ES FRESCO, NO viene del batch.',
+      'Cuando el salmón está listo (opaco en el centro), arma el bowl: En un bowl grande, coloca ~237 g de arroz CALIENTE en la BASE. Encima del arroz, coloca la espinaca marchita. Encima de la espinaca, coloca el salmón entero o en 2-3 trozos grandes.',
       'Termina con los toppings: Rocía 10 ml de salsa de soya (aproximadamente 2 cucharaditas) sobre el salmón. Corta 2 g de nori (alga, viene en hoja seca) en tiras finas usando tijera: dobla la hoja por la mitad un par de veces y corta franjas de aproximadamente 0.5 cm de ancho por 4-5 cm de largo. Espolvorea el nori. Espolvorea 5 g de semillas de sésamo. Pica 10 g de cebolla larga en aros finos de aproximadamente 2-3 mm y espolvorea. Finalmente, rocía 10 ml de aceite de oliva CRUDO (NO se cocina, va al final para mantener su sabor) por encima de TODO.',
       'IMPORTANTE — Control de cocción del salmón: Si después de los 10 minutos el salmón no se separa fácil en láminas o el centro todavía se ve translúcido (brillante, no opaco), el pescado NO está cocido. Vuelve a meter en la air fryer otros 2-3 minutos. NO te apresures — un pescado crudo por dentro es peligroso. Es mejor cocinarlo un poco de más que de menos.'
     ]
@@ -261,6 +261,46 @@ export const RECETAS = {
       'Prepara el huevo revuelto: Rompe 2 huevos en un tazón, bate con tenedor 20 segundos. En tu sartén Rena Ware PEQUEÑA a FUEGO MEDIO-BAJO (posición 3-4): calienta 2 minutos vacía y seca, prueba de agua (gotas que ruedan), agrega una pizca de ghee. Vierte los huevos batidos. Revuelve constantemente con espátula durante 2-3 minutos hasta que estén FIRMES Y OPACOS, sin partes brillantes ni líquidas.',
       'Agrega 80 g de tofu Mori-Nu del contenedor del batch. El tofu Silken es DELICADO: agrégalo con una cuchara sin grandes movimientos. Deja reposar 30 segundos sin mover la olla para que se temple.',
       'Sirve en un bowl hondo: Vierte la sopa con fideos, espinaca y tofu. Coloca el huevo (pochéado o revuelto) encima. Termina con: 2 g de nori cortado en tiras finas con tijera (~0.5 cm de ancho x 4-5 cm de largo), 15 g de cebolla larga cortada en aros finos (~2-3 mm de grosor), y 7 ml de aceite de sésamo CRUDO rociado por encima (el aceite NO se cocina, va al final para que mantenga su sabor).'
+    ]
+  },
+
+  mandarina_diaria: {
+    id: 'mandarina_diaria',
+    nombre: 'Mandarina',
+    foto_url: null,
+    tipo: 'snack',
+    rango: null,
+    cuando: 'Merienda — todos los días (entre almuerzo y cena)',
+    tiempo_min: 1,
+    kcal: 50, proteina_g: 0.7, grasa_g: 0.1, carbo_g: 11.7,
+    ajuste_fase1: null,
+    regla_especial: null,
+    ingredientes: [
+      { nombre: 'Mandarina', crudo: '100 g (1 ud mediana)', kcal: 50, p: 0.7, g: 0.1, c: 11.7 }
+    ],
+    pasos: [
+      'Pela la mandarina. Come los gajos solos. Prueba con un toque de sal — resalta el dulce de forma sorprendente. Sin preparación adicional.'
+    ]
+  },
+
+  mugicha: {
+    id: 'mugicha',
+    nombre: 'Mugicha — Té de cebada',
+    foto_url: null,
+    tipo: 'bebida',
+    rango: null,
+    cuando: 'Todo el día — hidratación libre, sin límite',
+    tiempo_min: 5,
+    kcal: 0, proteina_g: 0, grasa_g: 0, carbo_g: 0,
+    ajuste_fase1: null,
+    regla_especial: 'Sin cafeína. Sin azúcar. Cero calorías. Se puede tomar sin límite como agua.',
+    ingredientes: [
+      { nombre: 'Bolsitas mugicha (cebada tostada)', crudo: '1 bolsita', kcal: 0, p: 0, g: 0, c: 0 },
+      { nombre: 'Agua fría', crudo: '1 litro', kcal: 0, p: 0, g: 0, c: 0 }
+    ],
+    pasos: [
+      'OPCIÓN FRÍA — la mejor para Chía (más refrescante):\n1. Llena una jarra o botella con 1 litro de agua fría\n2. Mete 1 bolsita de mugicha\n3. A la NEVERA por mínimo 30 minutos\n   (Puede quedarse toda la noche — más oscuro el color, más sabor)\n4. Retira la bolsita. Sirve directo o con hielo\n\n💡 Haz una jarra el domingo — dura 3-4 días en nevera.',
+      'OPCIÓN CALIENTE — para mañanas frías:\n1. Hierve 1 litro de agua\n2. Apaga el fuego. Mete 1 bolsita\n3. Deja reposar 5 minutos\n4. Retira la bolsita. Sirve en taza\n\nPuede tomarse caliente o dejar enfriar y meter a la nevera.'
     ]
   },
 
